@@ -8,7 +8,7 @@ import Projects from "./Components/Projects";
 function App() {
  return (
   <ThemeProvider defaultTheme='system' storageKey='vite-ui-theme'>
-   <main className='bg-white dark:bg-black-100 overflow-y-scroll no-scrollbar h-screen'>
+   <main className='border border-white dark:border-black-100 bg-white dark:bg-black-100 overflow-y-scroll no-scrollbar h-screen'>
     <HeroHighlight containerClassName='bg-white dark:bg-black-100 px-8 pb-6'>
      <Hero />
      <About />

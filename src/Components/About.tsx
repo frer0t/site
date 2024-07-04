@@ -121,7 +121,7 @@ const About = () => {
     "fun fact when i'm not coding, i enjoy basketball🏀, listing to music🎧 and{" "}
     <a
      className='inline-flex hover:underline transition text-yellow-500'
-     href='https://monkeytype.com/profile/frerot._'
+     href='https://monkeytype.com/profile/frerot'
      target='_blank'
     >
      monkeytype,
