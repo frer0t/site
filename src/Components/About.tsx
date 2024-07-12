@@ -34,8 +34,8 @@ const About = () => {
     transition={{ duration: 0.9, delay: 0.2 }}
     className='mt-4 text-black-100 dark:text-white text-base sm:text-lg sm:text-center '
    >
-    After graduating in networking, i decided to pursue my passion for
-    programming. i enrolled in andela technical leadership program{" "}
+    After highschool, i decided to pursue my passion for programming. i enrolled
+    in andela technical leadership program{" "}
     <a
      href='https://webreverseproxy.andela.com/andela-technical-leadership-program-rwanda'
      target='_blank'
@@ -118,7 +118,8 @@ const About = () => {
     transition={{ duration: 0.9, delay: 0.2 }}
     className='mt-3 italic text-black-100 dark:text-white text-base sm:text-lg sm:text-center'
    >
-    "fun fact when i'm not coding, i enjoy basketball🏀, listing to music🎧 and{" "}
+    "fun fact when i'm not coding, i enjoy basketball 🏀, listing to music 🎧
+    and{" "}
     <a
      className='inline-flex hover:underline transition text-yellow-500'
      href='https://monkeytype.com/profile/frerot'

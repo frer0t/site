@@ -3,6 +3,7 @@ import { TextGenerateEffect } from "../ui/TextGenerate";
 import Highlightext from "./Highlightext";
 import { CiLinkedin, CiLocationArrow1 } from "react-icons/ci";
 import { Link } from "react-scroll";
+import { CiLink } from "react-icons/ci";
 
 const Hero = () => {
  return (
@@ -20,9 +21,10 @@ const Hero = () => {
      <a
       href='https://github.com/iamfrerot'
       target='_blank'
-      className='inline-flex'
+      className='inline-flex hover:underline text-secondary'
      >
-      <Highlightext text='frérot' styles='hover:underline' />
+      <Highlightext text='frérot' />
+      <CiLink className='inline text-lg text-secondary' />
      </a>{" "}
      a <Highlightext text='full-stack' /> and{" "}
      <Highlightext text='mobile developer' />
