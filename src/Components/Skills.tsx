@@ -17,11 +17,11 @@ const fadeInAnimationVariants = {
 
 const Skills = () => {
  return (
-  <section className=' md:px-20'>
+  <section className='md:px-20'>
    <h1 className='text-center text-black-100 dark:text-white text-3xl sm:text-4xl font-semibold '>
     Skills
    </h1>
-   <ul className='mt-8 flex flex-wrap justify-center gap-2 lg:text-lg text-black-100 dark:text-white text-center font-semibold'>
+   <ul className='mt-8 flex flex-wrap justify-center gap-2 text-sm lg:text-lg text-black-100 dark:text-white text-center font-semibold'>
     {skillsData.map((skill, index) => (
      <motion.li
       key={index}
@@ -30,6 +30,9 @@ const Skills = () => {
       initial='initial'
       whileInView='animate'
       custom={index}
+      viewport={{
+       once: true,
+      }}
      >
       {skill}
      </motion.li>

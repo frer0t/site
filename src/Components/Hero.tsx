@@ -31,7 +31,7 @@ const Hero = () => {
     </p>
     <div className='flex items-center gap-x-4'>
      <Link
-      to='contact '
+      to='contact'
       className='text-black-100 font-bold hover:text-secondary dark:text-white bg-transparent px-3 py-2 rounded-3xl border border-gray-700 hover:bg-black-100 hover:dark:text-secondary transition duration-300 flex gap-x-1 cursor-pointer'
       smooth={true}
       duration={800}
