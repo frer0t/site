@@ -57,7 +57,7 @@ const Contact = () => {
     <input
      type='text'
      placeholder='your name'
-     className={`bg-transparent w-full py-2 text-black-100 dark:text-white border-b-2  outline-0 ${
+     className={`bg-transparent w-full py-2 text-black-100 dark:text-white border-b-2  outline-0 rounded-none ${
       errors.name ? "border-red-500" : "border-secondary"
      }`}
      {...register("name", {
@@ -67,9 +67,9 @@ const Contact = () => {
     />
     {errors.name && <p className='text-red-500 text-sm'>Required</p>}
     <input
-     type='email'
+     type='text'
      placeholder='your email'
-     className={`bg-transparent w-full py-2 text-black-100 dark:text-white border-b-2 outline-0 ${
+     className={`bg-transparent w-full py-2 text-black-100 dark:text-white border-b-2 outline-0 rounded-none ${
       errors.email ? "border-red-500" : "border-secondary"
      }`}
      {...register("email", {
@@ -80,7 +80,7 @@ const Contact = () => {
     />
     {errors.email && <p className='text-red-500 text-sm'>Invalid email</p>}
     <textarea
-     className={`bg-transparent w-full py-2 text-black-100 dark:text-white border-b-2 outline-0 overflow-y-scroll no-scrollbar min-h-[110px] ${
+     className={`bg-transparent w-full py-2 text-black-100 dark:text-white border-b-2 outline-0 overflow-y-scroll no-scrollbar min-h-[110px] rounded-none ${
       errors.message ? "border-red-500" : "border-secondary"
      }`}
      placeholder='your message'

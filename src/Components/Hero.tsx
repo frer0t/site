@@ -21,18 +21,18 @@ const Hero = () => {
      <a
       href='https://github.com/iamfrerot'
       target='_blank'
-      className='inline-flex hover:underline text-secondary'
+      className='inline-flex hover:underline text-secondary font-bold'
      >
       <Highlightext text='frérot' />
-      <CiLink className='inline text-lg text-secondary' />
+      <CiLink className='inline text-lg text-secondary ' />
      </a>{" "}
-     a <Highlightext text='full-stack' /> and{" "}
-     <Highlightext text='mobile developer' />
+     a <Highlightext text='full-stack' styles='font-bold' /> and{" "}
+     <Highlightext text='mobile developer' styles='font-bold' />
     </p>
     <div className='flex items-center gap-x-4'>
      <Link
       to='contact'
-      className='text-black-100 font-bold hover:text-secondary dark:text-white bg-transparent px-3 py-2 rounded-3xl border border-gray-700 hover:bg-black-100 hover:dark:text-secondary transition duration-300 flex gap-x-1 cursor-pointer'
+      className='text-black-100 font-bold hover:text-secondary dark:text-white bg-transparent px-3 py-2 rounded-3xl border border-gray-700 hover:bg-white dark:hover:bg-black-100 hover:dark:text-secondary transition duration-300 flex gap-x-1 cursor-pointer'
       smooth={true}
       duration={800}
      >

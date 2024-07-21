@@ -31,7 +31,7 @@ const About = () => {
     }}
     initial='hidden'
     animate={p1Controls}
-    transition={{ duration: 0.9, delay: 0.2 }}
+    transition={{ duration: 0.9 }}
     className='mt-4 text-black-100 dark:text-white text-base sm:text-lg sm:text-center '
    >
     After highschool, i decided to pursue my passion for programming. i enrolled
@@ -69,7 +69,7 @@ const About = () => {
      visible: { opacity: 1, y: 0 },
     }}
     initial='hidden'
-    transition={{ duration: 0.9, delay: 0.2 }}
+    transition={{ duration: 0.9 }}
     className='mt-4 text-black-100 dark:text-white text-base sm:text-lg sm:text-center'
    >
     I also joined the Talent 4 Startups program{" "}
@@ -116,7 +116,7 @@ const About = () => {
     }}
     initial='hidden'
     transition={{ duration: 0.9, delay: 0.2 }}
-    className='mt-3 italic text-black-100 dark:text-white text-base sm:text-lg sm:text-center'
+    className='mt-3 italic text-black-100 dark:text-white text-base sm:text-lg text-center'
    >
     "fun fact when i'm not coding, i enjoy basketball 🏀, listing to music 🎧
     and{" "}

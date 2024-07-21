@@ -27,12 +27,12 @@ const Experience = () => {
         {experience.role} -{" "}
         <span className='text-lg text-secondary'>{experience.company}</span>
        </h6>
-       <p className='text-neutral-400 mb-4'>{experience.description}</p>
+       <p className='text-neutral-500 mb-4'>{experience.description}</p>
        <div className='flex flex-wrap'>
         {experience.stack.map((tech, index) => (
          <span
           key={index}
-          className='mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-secondary'
+          className='mr-2 mt-4 rounded bg-neutral-200 dark:bg-neutral-900 px-2 py-1 text-sm font-medium text-secondary'
          >
           {tech}
          </span>
