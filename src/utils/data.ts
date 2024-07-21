@@ -1,9 +1,15 @@
 export const projectsData = [
  {
+  title: "Blog App",
+  description:
+   "A backend web app powered by Node js, Express js, Ejs & Mongodb and it's a dynamic platform that lets you create, read, update and delete your own blogs with ease.",
+  link: "https://blogapp-j7sb.onrender.com/",
+ },
+ {
   title: "Movie Land",
   description:
-   "The Movie Land website is a movie search application. Users can search for movies, view details about them, and explore different categories",
-  link: "https://movielandfrerot.netlify.app",
+   "The Movie Land website is a movie search application. Users can search for movies and view details about them.",
+  link: "https://movieland.frerot.dev/",
  },
 ];
 
@@ -16,7 +22,6 @@ export const skillsData = [
  "react-native",
  "node-js",
  "express-js",
- "firebase",
  "mongodb",
  "postgresql",
  "git",
@@ -25,7 +30,7 @@ export const skillsData = [
 ];
 export const experienceData = [
  {
-  role: "Mobile Developer",
+  role: "ios & frontend Developer",
   company: "Eden Care Medical",
   type: "Intership",
   location: "On-site, Kigali",
