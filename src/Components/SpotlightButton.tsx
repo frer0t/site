@@ -1,7 +1,7 @@
-import { FC, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-const SpotlightButton: FC = () => {
+const SpotlightButton = ({ disable }: { disable: boolean }) => {
  const btnRef = useRef<HTMLButtonElement | null>(null);
  const spanRef = useRef<HTMLSpanElement | null>(null);
 
@@ -44,6 +44,7 @@ const SpotlightButton: FC = () => {
    whileTap={{ scale: 0.985 }}
    ref={btnRef}
    className='relative w-full overflow-hidden rounded-lg bg-secondary px-4 py-3 text-lg font-medium text-white'
+   disabled={disable}
   >
    <span className='pointer-events-none relative z-10 mix-blend-difference'>
     Send
