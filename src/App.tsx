@@ -25,7 +25,7 @@ function App() {
      <Contact />
      <Footer />
      <Toaster
-      position='top-left'
+      position='bottom-right'
       toastOptions={{
        style: {
         background: "#363636",
