@@ -12,8 +12,8 @@ export const HeroHighlight = ({
  className?: string;
  containerClassName?: string;
 }) => {
- let mouseX = useMotionValue(0);
- let mouseY = useMotionValue(0);
+ const mouseX = useMotionValue(0);
+ const mouseY = useMotionValue(0);
 
  function handleMouseMove({
   currentTarget,
@@ -21,17 +21,14 @@ export const HeroHighlight = ({
   clientY,
  }: React.MouseEvent<HTMLDivElement>) {
   if (!currentTarget) return;
-  let { left, top } = currentTarget.getBoundingClientRect();
+  const { left, top } = currentTarget.getBoundingClientRect();
 
   mouseX.set(clientX - left);
   mouseY.set(clientY - top);
  }
  return (
   <div
-   className={cn(
-    "relative flex items-center bg-white  justify-center w-full group",
-    containerClassName
-   )}
+   className={cn("relative group", containerClassName)}
    onMouseMove={handleMouseMove}
   >
    <div className='absolute inset-0 bg-dot-thick-neutral-300 dark:bg-dot-thick-neutral-900 pointer-events-none' />
