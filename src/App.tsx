@@ -9,11 +9,13 @@ import Contact from "./Components/Contact";
 import Experience from "./Components/Experience";
 import Footer from "./Components/Footer";
 import { Toaster } from "react-hot-toast";
+import Navbar from "./Components/Navbar";
 
 function App() {
  return (
   <ThemeProvider defaultTheme='system' storageKey='vite-ui-theme'>
-   <main className='border border-white dark:border-black-100 bg-white dark:bg-black-100'>
+   <main className='border border-white dark:border-black-100 bg-white dark:bg-black-100 flex flex-col'>
+    <Navbar />
     <HeroHighlight containerClassName='bg-white dark:bg-black-100 px-4 md:px-10 py-4 overflow-x-hidden'>
      <Hero />
      <About />

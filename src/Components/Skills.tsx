@@ -17,7 +17,7 @@ const fadeInAnimationVariants = {
 
 const Skills = () => {
  return (
-  <section className='md:px-20'>
+  <section className='md:px-20' id='skills'>
    <h1 className='text-center text-black-100 dark:text-white text-3xl sm:text-4xl font-semibold '>
     Skills
    </h1>
