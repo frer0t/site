@@ -52,7 +52,7 @@ const Contact = () => {
     <p className='text-gray-600 font-extrabold text-base sm:text-lg'>
      having more questions? please fill form below and i'll get back to you
      asap!. or email:{" "}
-     <span className='text-secondary'>frerotntwali@gmail.com</span>
+     <span className='text-secondary'>frerot@frerot.dev</span>
     </p>
     <input
      type='text'
