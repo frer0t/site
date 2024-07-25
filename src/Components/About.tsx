@@ -47,9 +47,9 @@ const About = () => {
     a nine-month accelerator program, where i gained proficiency in
     <Highlightext text='javascript/typescript' /> for both{" "}
     <Highlightext text='front-end' /> and <Highlightext text='back-end' />
-    developement, as well as skills in <Highlightext text='html, css,' /> and
-    web frameworks like <Highlightext text='react/redux' /> for building user
-    interfaces. i acquired experience working with
+    developement, as well <Highlightext text='html, css,' /> and web framework
+    like <Highlightext text='react' /> for building user interfaces. i acquired
+    experience working with
     <Highlightext text='databases' /> like{" "}
     <Highlightext text='postgresql & monogodb,' /> server-side framewords such
     as <Highlightext text='express.js,' /> and runtime environments including
