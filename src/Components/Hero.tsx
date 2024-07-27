@@ -8,7 +8,7 @@ import { CiLink } from "react-icons/ci";
 const Hero = () => {
  return (
   <section
-   className='flex flex-col justify-center sm:items-center h-screen w-fit'
+   className='flex flex-col justify-center sm:items-center h-screen w-full'
    id='home'
   >
    <TextGenerateEffect
