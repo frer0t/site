@@ -50,9 +50,9 @@ const Contact = () => {
     onSubmit={handleSubmit(sendEmail)}
    >
     <p className="text-gray-600 font-extrabold text-base sm:text-lg">
-     having more questions? please fill form below and i'll get back to you
-     asap!. or email:{' '}
-     <span className="text-secondary">ntwalifrerotjacques@gmail.com</span>
+     having more questions? please fill contact form below and i'll get back to
+     you asap!. or email:{' '}
+     <span className="text-secondary">frerotntwali@gmail.com</span>
     </p>
     <input
      type="text"
