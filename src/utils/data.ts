@@ -1,15 +1,15 @@
 export const projectsData = [
  {
-  title: "Blog App",
+  title: 'Blog App',
   description:
    "A backend web app powered by Node js, Express js, Ejs & Mongodb and it's a dynamic platform that lets you create, read, update and delete your own blogs with ease.",
-  link: "https://blogapp-j7sb.onrender.com/",
+  link: 'https://blogapp-j7sb.onrender.com/',
  },
  {
-  title: "Movie Land",
+  title: 'Locus Program',
   description:
-   "The Movie Land website is a movie search application. Users can search for movies and view details about them.",
-  link: "https://movieland.frerot.dev/",
+   'The Entrepreneurship Program landing page by Salim equips aspiring business owners with the skills to start, grow, and manage successful ventures. Through practical workshops and expert mentorship, participants learn key areas like business planning, market research, financial management, and marketing. Ideal for beginners or experienced entrepreneurs, this program helps turn ideas into thriving businesses.',
+  link: 'https://locus.frerot.dev/',
  },
 ];
 
