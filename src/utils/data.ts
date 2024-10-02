@@ -2,14 +2,16 @@ export const projectsData = [
  {
   title: 'Blog App',
   description:
-   "A backend web app powered by Node js, Express js, Ejs & Mongodb and it's a dynamic platform that lets you create, read, update and delete your own blogs with ease.",
+   "This backend web app is built with Node.js, Express.js, EJS, and MongoDB, offering a dynamic platform for managing blogs. Users can easily create, read, update, and delete blog posts. MongoDB serves as the database for storing and managing blog data. The app supports full CRUD functionality, allowing seamless content management. It's designed to be user-friendly and responsive for efficient blog handling.",
   link: 'https://blogapp-j7sb.onrender.com/',
+  stacks: ['MongoDb', 'ejs', 'Node-js', 'Express-js', 'jwt'],
  },
  {
   title: 'Locus Program',
   description:
    'The Entrepreneurship Program landing page by Salim equips aspiring business owners with the skills to start, grow, and manage successful ventures. Through practical workshops and expert mentorship, participants learn key areas like business planning, market research, financial management, and marketing. Ideal for beginners or experienced entrepreneurs, this program helps turn ideas into thriving businesses.',
   link: 'https://locus.frerot.dev/',
+  stacks: ['React', 'Framer', 'Email-js', 'React-Hook-Form'],
  },
 ];
 
@@ -36,7 +38,6 @@ export const experienceData = [
   role: 'frontend Engineer',
   company: 'Eden Care Medical',
   companyLink: 'https://www.edencaremedical.com/',
-  type: 'Intership',
   location: 'hybrid, Kigali',
   start: 'Jul 2024',
   end: 'present',
@@ -55,10 +56,9 @@ As a Frontend Engineer intern at Eden Care Medical, I have been primarily focuse
   ],
  },
  {
-  role: 'Techinical Leadership program participant',
+  role: 'Technical Leadership program participant',
   company: 'Andela',
   companyLink: 'https://andela.tv/andela-technical-leadership-program-rwanda',
-  type: 'apprenticeship',
   location: 'remote, Kigali',
   start: 'FEB 2024',
   end: 'present',
@@ -77,7 +77,6 @@ As a Frontend Engineer intern at Eden Care Medical, I have been primarily focuse
   role: 'Digital Africa Program participant',
   company: 'ICT Chamber & Digital africa',
   companyLink: 'https://talent4startups.digital-africa.co/',
-  type: 'apprenticeship',
   location: 'hybrid, Kigali',
   start: 'mar 2024',
   end: 'jun 2024',

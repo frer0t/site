@@ -1,11 +1,11 @@
 import { experienceData } from "../utils/data";
 import { motion } from "framer-motion";
+import { CiLink } from 'react-icons/ci';
+import SectionTitle from './SectionTitle';
 const Experience = () => {
  return (
   <section id="experience" className="mt-10 ">
-   <h1 className="text-center text-black-100 dark:text-white text-3xl sm:text-4xl font-semibold mb-10">
-    Experience
-   </h1>
+   <SectionTitle title="Experience" />
    <div>
     {experienceData.map((experience, index) => (
      <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
@@ -29,9 +29,10 @@ const Experience = () => {
         <a
          target="blank"
          href={experience.companyLink}
-         className="text-lg text-secondary hover:underline"
+         className="inline-flex text-lg text-secondary hover:underline"
         >
          {experience.company}
+         <CiLink />
         </a>
        </h6>
        <p className="text-neutral-500 mb-4">{experience.description}</p>

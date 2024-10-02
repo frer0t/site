@@ -1,6 +1,7 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import SpotlightButton from "./SpotlightButton";
 import toast from "react-hot-toast";
+import SectionTitle from './SectionTitle';
 
 type ContactFormFields = {
  name: string;
@@ -17,34 +18,32 @@ const Contact = () => {
   reset,
  } = useForm<ContactFormFields>();
  const sendEmail: SubmitHandler<ContactFormFields> = async (formData) => {
-  const loadingToast = toast.loading("Sending");
+  const loadingToast = toast.loading('Sending');
   const bodyData = JSON.stringify(formData);
   try {
    const res = await fetch(`${BACKEND_URL}/api/contact`, {
     body: bodyData,
     headers: {
-     "Content-type": "application/json",
+     'Content-type': 'application/json',
     },
-    method: "POST",
+    method: 'POST',
    });
    const { data, error } = await res.json();
    toast.dismiss(loadingToast);
    if (!res.ok) throw new Error(error.message);
    reset();
-   toast.success("Sent");
+   toast.success('Sent');
    console.log(data);
   } catch (error: any) {
    toast.dismiss(loadingToast);
-   error.message === "Failed to fetch"
-    ? toast.error("No internet Connection")
+   error.message === 'Failed to fetch'
+    ? toast.error('No internet Connection')
     : toast.error(error.message);
   }
  };
  return (
   <section id="contact" className="flex flex-col items-center mt-10">
-   <h1 className="text-center text-black-100 dark:text-white text-3xl sm:text-4xl font-semibold">
-    Contact
-   </h1>
+   <SectionTitle title="Contact" />
    <form
     className="w-full md:max-w-[600px] py-4 sm:p-4 flex flex-col gap-y-8"
     onSubmit={handleSubmit(sendEmail)}
