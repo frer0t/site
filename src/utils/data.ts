@@ -13,6 +13,12 @@ export const projectsData = [
   link: 'https://locus.frerot.dev/',
   stacks: ['React', 'Framer', 'Email-js', 'React-Hook-Form'],
  },
+ {
+  title:'whitepace',
+  description:'a saas Landing Page for Project management software that enables your teams to collaborate, plan, analyze and manage everyday tasks, Images, videos, PDFs and audio files are supported. Create math expressions and diagrams directly from the app. Take photos with the mobile app and save them to a note.',
+  link:'https://whitepace.frerot.dev',
+  stacks:['next-js','react']
+ }
 ];
 
 export const skillsData = [
