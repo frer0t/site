@@ -4,20 +4,20 @@ export const projectsData = [
   description:
    "This backend web app is built with Node.js, Express.js, EJS, and MongoDB, offering a dynamic platform for managing blogs. Users can easily create, read, update, and delete blog posts. MongoDB serves as the database for storing and managing blog data. The app supports full CRUD functionality, allowing seamless content management. It's designed to be user-friendly and responsive for efficient blog handling.",
   link: 'https://blogapp-j7sb.onrender.com/',
-  stacks: ['MongoDb', 'ejs', 'Node-js', 'Express-js', 'jwt'],
+  stacks: ['MongoDb', 'ejs', 'Node-js', 'Express-js', 'jwt','Html','css'],
  },
  {
   title: 'Locus Program',
   description:
    'The Entrepreneurship Program landing page by Salim equips aspiring business owners with the skills to start, grow, and manage successful ventures. Through practical workshops and expert mentorship, participants learn key areas like business planning, market research, financial management, and marketing. Ideal for beginners or experienced entrepreneurs, this program helps turn ideas into thriving businesses.',
   link: 'https://locus.frerot.dev/',
-  stacks: ['React', 'Framer', 'Email-js', 'React-Hook-Form'],
+  stacks: ['React','tailwind-css', 'Framer', 'Email-js', 'React-Hook-Form'],
  },
  {
   title:'whitepace',
   description:'a saas Landing Page for Project management software that enables your teams to collaborate, plan, analyze and manage everyday tasks, Images, videos, PDFs and audio files are supported. Create math expressions and diagrams directly from the app. Take photos with the mobile app and save them to a note.',
   link:'https://whitepace.frerot.dev',
-  stacks:['next-js','react']
+  stacks:['next-js','tailwind-css','react']
  }
 ];
 
@@ -46,7 +46,7 @@ export const experienceData = [
   companyLink: 'https://www.edencaremedical.com/',
   location: 'hybrid, Kigali',
   start: 'Jul 2024',
-  end: 'present',
+  end: 'Oct 2024',
   description: `
 As a Frontend Engineer intern at Eden Care Medical, I have been primarily focused on building a UI Components Library for the organization. This role involves selecting appropriate JavaScript frameworks, collaborating closely with the design team to implement UI components, and performing unit, integration, and performance testing on the components. Additionally, I have set up the deployment environment and deployed the components to a registry, gathering feedback from the engineering team to enhance the components through iterative release cycles. I am responsible for maintaining JIRA tickets, attending daily scrum meetings to understand the scopes of other ongoing projects, and ensuring effective team communication. Beyond the UI Components Library, I have also worked on other key systems at Eden Care, collaborating with the frontend engineering team to meet functional requirements and improve existing systems.`,
   stack: [
