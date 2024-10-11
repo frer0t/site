@@ -66,7 +66,7 @@ const Contact = () => {
     />
     {errors.name && <p className="text-red-500 text-sm">Required</p>}
     <input
-     type="text"
+     type="email"
      placeholder="your email"
      className={`bg-transparent w-full py-2 text-black-100 dark:text-white border-b-2 outline-0 rounded-none ${
       errors.email ? 'border-red-500' : 'border-secondary'
@@ -79,7 +79,7 @@ const Contact = () => {
     />
     {errors.email && <p className="text-red-500 text-sm">Invalid email</p>}
     <textarea
-     className={`bg-transparent w-full py-2 text-black-100 dark:text-white border-b-2 outline-0 overflow-y-scroll no-scrollbar min-h-[110px] rounded-none ${
+     className={`bg-transparent w-full py-2 text-black-100 dark:text-white border-b-2 outline-0 overflow-y-scroll no-scrollbar min-h-[150px] rounded-none ${
       errors.message ? 'border-red-500' : 'border-secondary'
      }`}
      placeholder="your message"
