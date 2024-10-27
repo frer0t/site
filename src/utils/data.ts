@@ -67,7 +67,7 @@ As a Frontend Engineer intern at Eden Care Medical, I have been primarily focuse
   companyLink: 'https://andela.tv/andela-technical-leadership-program-rwanda',
   location: 'remote, Kigali',
   start: 'FEB 2024',
-  end: 'present',
+  end: 'Oct 2024',
   description: `Andela Technical Leadership Program (ATLP) is a nine-month accelerator program designed to develop participants' proficiency in JavaScript/TypeScript for both front-end and back-end development. The program covers key skills in HTML, CSS, and web frameworks like React/Redux, along with server-side frameworks such as Express.js and runtime environments including Node.js. Participants also gain experience with databases like PostgreSQL and MongoDB. Additionally, ATLP enhances soft skills for effective teamwork and collaboration in distributed teams and improves project management abilities.`,
   stack: [
    'node.js',
