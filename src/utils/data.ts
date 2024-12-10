@@ -85,7 +85,7 @@ As a Frontend Engineer Intern at Eden Care Medical, I developed a UI components 
   location: "remote, Kigali",
   start: "Feb 2024",
   end: "Nov 2024",
-  description: `Andela Technical Leadership Program (ATLP) is a nine-month accelerator program designed to develop participants' proficiency in JavaScript/TypeScript for both front-end and back-end development. The program covers key skills in HTML, CSS, and web frameworks like React/Redux, along with server-side frameworks such as Express.js and runtime environments including Node.js. Participants also gain experience with databases like PostgreSQL and MongoDB. Additionally, ATLP enhances soft skills for effective teamwork and collaboration in distributed teams and improves project management abilities.`,
+  description: `The Andela Technical Leadership Program (ATLP) is a nine-month accelerator focused on building expertise in JavaScript/TypeScript for front-end and back-end development. It covers HTML, CSS, React/Redux, Express.js, Node.js, PostgreSQL, and MongoDB, while also enhancing teamwork, collaboration, and project management skills for distributed teams.`,
   stack: [
    "node.js",
    "express.js",
@@ -104,10 +104,7 @@ As a Frontend Engineer Intern at Eden Care Medical, I developed a UI components 
   start: "mar 2024",
   end: "jun 2024",
   description: `
-As a participant in the Digital Africa Program & ICT Chamber, I focused on mobile development, honing my skills in creating mobile applications using React Native. This program provided me with practical, hands-on experience through real-world projects, where I was able to build, test, and deploy mobile apps effectively.
-
-Collaborating with a diverse group of developers, I learned best practices in mobile development, which significantly improved my technical and problem-solving abilities. The program emphasized innovation and practical application, allowing me to contribute to impactful projects that address real-world needs.
-`,
+As a participant in the Digital Africa Program & ICT Chamber, I gained hands-on experience in mobile development using React Native. Through real-world projects, I built, tested, and deployed mobile apps, collaborating with diverse developers to refine my technical and problem-solving skills. The program emphasized innovation and practical application, enabling me to contribute to impactful projects.`,
   stack: [
    "node.js",
    "express.js",
