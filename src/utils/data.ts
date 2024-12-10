@@ -65,7 +65,7 @@ stack:["java","spring-boot"]
   start: "Jul 2024",
   end: "Oct 2024",
   description: `
-As a Frontend Engineer intern at Eden Care Medical, I have been primarily focused on building a UI Components Library for the organization. This role involves selecting appropriate JavaScript frameworks, collaborating closely with the design team to implement UI components, and performing unit, integration, and performance testing on the components. Additionally, I have set up the deployment environment and deployed the components to a registry, gathering feedback from the engineering team to enhance the components through iterative release cycles. I am responsible for maintaining JIRA tickets, attending daily scrum meetings to understand the scopes of other ongoing projects, and ensuring effective team communication. Beyond the UI Components Library, I have also worked on other key systems at Eden Care, collaborating with the frontend engineering team to meet functional requirements and improve existing systems.`,
+As a Frontend Engineer Intern at Eden Care Medical, I developed a UI components library, selected JavaScript frameworks, collaborated with the design team, and conducted testing to ensure quality. I set up the deployment environment, published components to a registry, and iterated based on feedback. Additionally, I contributed to key systems, working with the frontend team to meet functional requirements and improve existing systems.`,
   stack: [
    "react",
    "verdaccio",
