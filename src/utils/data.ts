@@ -51,10 +51,9 @@ location:"Remote, Kigali",
 start:"Nov 2024",
 end:"Present",
 description:`
-● Designed and implemented robust backend systems using Spring boot and java
-● Developed and maintained REST APIs for critical application functionalities, ensuring
-high performance and scalability.
-● Collaborated with cross-functional teams to streamline integration with frontend
+Designing and implemented robust backend systems using Spring boot and java, Developing and maintained REST APIs for critical application functionalities, ensuring
+high performance and scalability.,
+Collaborating with cross-functional teams to streamline integration with frontend
 applications.`,
 stack:["java","spring-boot"]
 },
