@@ -1,4 +1,4 @@
-import { CiInstagram, CiLinkedin } from "react-icons/ci";
+import { CiLinkedin } from "react-icons/ci";
 import SectionTitle from "./SectionTitle";
 
 const Contact = () => {
@@ -9,9 +9,6 @@ const Contact = () => {
     <a href='mailto:frerotntwali@gmail.com'>frerotntwali@gmail.com</a>
     <p className='text-black-100 dark:text-white'>Kigali, Rwanda</p>
     <div className='flex text-3xl'>
-     <a href='https://www.instagram.com/frerot._/' target='_blank'>
-      <CiInstagram className='text-black-100 dark:text-white text-[32px] sm:text-[35px] hover:text-secondary hover:dark:text-secondary transition duration-500' />
-     </a>
      <a href='https://www.linkedin.com/in/frerotntwali' target='_blank'>
       <CiLinkedin className='text-black-100 dark:text-white text-[32px] sm:text-[35px] hover:text-secondary hover:dark:text-secondary transition duration-500' />
      </a>
