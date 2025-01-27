@@ -9,7 +9,7 @@ export const projectsData = [
  {
   title: "Locus Program",
   description:
-   "The Entrepreneurship Program landing page by Salim equips aspiring business owners with the skills to start, grow, and manage successful ventures. Through practical workshops and expert mentorship, participants learn key areas like business planning, market research, financial management, and marketing. Ideal for beginners or experienced entrepreneurs, this program helps turn ideas into thriving businesses.",
+   "Salim's Entrepreneurship Program empowers aspiring entrepreneurs to start, grow, and manage successful ventures. With practical workshops and expert mentorship, participants master business planning, market research, finance, and marketing—turning ideas into thriving businesses.",
   link: "https://locus.frerot.dev/",
   stacks: ["React", "tailwind-css", "Framer", "Email-js", "React-Hook-Form"],
  },
