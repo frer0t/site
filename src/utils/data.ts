@@ -1,10 +1,10 @@
 export const projectsData = [
  {
-  title: "Blog App",
+  title: "Userverse",
   description:
-   "This backend web app is built with Node.js, Express.js, EJS, and MongoDB, offering a dynamic platform for managing blogs. Users can easily create, read, update, and delete blog posts. MongoDB serves as the database for storing and managing blog data. The app supports full CRUD functionality, allowing seamless content management. It's designed to be user-friendly and responsive for efficient blog handling.",
-  link: "https://blogapp-j7sb.onrender.com/",
-  stacks: ["MongoDb", "ejs", "Node-js", "Express-js", "jwt", "Html", "css"],
+   "Userverse is a Java-based application that uses Spring Boot and MongoDB. The project is built using Maven and is containerized using Docker. This project provides an API for data analysis.",
+  link: "https://userverse.apidocumentation.com/reference",
+  stacks: ["mongodb", "java", "spring-boot", "swagger","javafaker"],
  },
  {
   title: "Locus Program",
@@ -13,13 +13,13 @@ export const projectsData = [
   link: "https://locus.frerot.dev/",
   stacks: ["React", "tailwind-css", "Framer", "Email-js", "React-Hook-Form"],
  },
- // {
- //  title: "whitepace",
- //  description:
- //   "a saas Landing Page for Project management software that enables your teams to collaborate, plan, analyze and manage everyday tasks, Images, videos, PDFs and audio files are supported. Create math expressions and diagrams directly from the app. Take photos with the mobile app and save them to a note.",
- //  link: "https://whitepace.frerot.dev",
- //  stacks: ["next-js", "tailwind-css", "react"],
- // },
+ {
+  title: "envario",
+  description:
+   "Envario is a command-line tool for validating environment variables against a schema. It helps ensure that your .env files are well-structured and contain all the necessary values in the right format.",
+  link: "https://www.npmjs.com/package/envario",
+  stacks: ["typscript", "commander","chalk"],
+ },
 ];
 
 export const skillsData = [
@@ -44,7 +44,7 @@ export const skillsData = [
 ];
 export const experienceData = [
 {
-role:"Junior Backend Engineer",
+role:"Backend Engineer",
 company:"Eden Care Medical",
 companyLink:"https://www.edencaremedical.com/",
 location:"Remote, Kigali",
@@ -58,7 +58,7 @@ applications.`,
 stack:["java","spring-boot"]
 },
  {
-  role: "frontend Engineer",
+  role: "Frontend Engineer",
   company: "Eden Care Medical",
   companyLink: "https://www.edencaremedical.com/",
   location: "hybrid, Kigali",
