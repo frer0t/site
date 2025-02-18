@@ -1,8 +1,26 @@
 import "@/public/global.css";
+import { imbFlexSansFont, justmeAgainDownHereFont } from "@/utils/fonts";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "frérot ntwali's website",
+  title: "frérot ntwali",
+  description: "frérot ntwali's personal website and portfolio",
+  keywords: [
+    "frérot ntwali",
+    "software engineer",
+    "web developer",
+    "portfolio",
+    "blog",
+  ],
+  authors: [{ name: "frérot ntwali" }],
+  creator: "frérot ntwali",
+  icons: [
+    {
+      url: "/logo.svg",
+      type: "image/svg+xml",
+      sizes: "any",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -11,7 +29,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${justmeAgainDownHereFont.variable} ${imbFlexSansFont.className} antialiased`}
+    >
       <body>{children}</body>
     </html>
   );
