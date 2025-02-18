@@ -1,5 +1,7 @@
+import Footer from "@/components/Footer";
 import "@/public/global.css";
 import { imbFlexSansFont, justmeAgainDownHereFont } from "@/utils/fonts";
+import { AnimatePresence } from "motion/react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -33,7 +35,10 @@ export default function RootLayout({
       lang="en"
       className={`${justmeAgainDownHereFont.variable} ${imbFlexSansFont.className} antialiased`}
     >
-      <body>{children}</body>
+      <body className="flex flex-col">
+        <AnimatePresence mode="wait">{children}</AnimatePresence>
+        <Footer />
+      </body>
     </html>
   );
 }
