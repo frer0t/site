@@ -1,13 +1,20 @@
 "use client";
+import clx from "clsx";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 const CYCLES_PER_LETTER = 2;
-const SHUFFLE_TIME = 70;
-const START_TEXT = "!@#$%^&*():{};|,.<>/?";
-const CHARS = "!@#$%faf*hhj:{q;|,.3>/?";
+const SHUFFLE_TIME = 80;
+const START_TEXT = "@#^&$fA$^fh2j:{Q|/#?*}~";
+const CHARS = "@#^&$fA$^fh2j:{Q|/#?*}~";
 
-const Title = ({ sectretTitle }: { sectretTitle: string }) => {
+const Title = ({
+  secretTitle,
+  className,
+}: {
+  secretTitle: string;
+  className: string;
+}) => {
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const [encrypted, setEncrypted] = useState(true);
   const [text, setText] = useState(START_TEXT);
@@ -15,7 +22,7 @@ const Title = ({ sectretTitle }: { sectretTitle: string }) => {
   const scramble = () => {
     let pos = 0;
     intervalRef.current = setInterval(() => {
-      const scrambled = sectretTitle
+      const scrambled = secretTitle
         .split("")
         .map((char, index) => {
           if (pos / CYCLES_PER_LETTER > index) {
@@ -32,44 +39,36 @@ const Title = ({ sectretTitle }: { sectretTitle: string }) => {
       setText(scrambled);
       pos++;
 
-      if (pos > sectretTitle.length * CYCLES_PER_LETTER) {
+      if (pos > secretTitle.length * CYCLES_PER_LETTER) {
         pos = 0; // Reset position
         setEncrypted(false); // Toggle encrypted state
         stopScramble();
-        setTimeout(() => {
-          setText(START_TEXT);
-          setTimeout(() => {
-            scramble();
-            setEncrypted(true);
-          }, 10000);
-        }, 10000);
       }
     }, SHUFFLE_TIME);
   };
 
   const stopScramble = () => {
     clearInterval(intervalRef.current || undefined);
-    setText(encrypted ? sectretTitle : START_TEXT);
+    setText(encrypted ? secretTitle : START_TEXT);
   };
 
   useEffect(() => {
     scramble();
     return () => {
       stopScramble();
-      // Clear any pending timeouts
-      const timeoutId = Number(setTimeout(() => {}, 0));
-      for (let i = 0; i < timeoutId; i++) {
-        clearTimeout(i);
-      }
     };
   }, []);
 
   return (
     <motion.h1
-      className={`text-6xl sm:text-8xl text-center group overflow-hidden relative font-medium   transition-colors duration-300 select-none ${
-        encrypted ? "text-mygreen" : "text-myblack"
-      } font-medownhere lowercase`}
-      title={`Decrypted: ${sectretTitle}`}
+      className={clx(
+        "group relative font-medownhere lowercase",
+        encrypted
+          ? "text-mygreen dark:text-myred"
+          : "text-myblack dark:text-white",
+        className
+      )}
+      title={`Decrypted: ${secretTitle}`}
     >
       {text}
       <motion.span
@@ -85,7 +84,7 @@ const Title = ({ sectretTitle }: { sectretTitle: string }) => {
           duration: 1,
           ease: "linear",
         }}
-        className={` absolute inset-0 z-0 scale-125 bg-gradient-to-t from-mygreen/0 from-40% via-mygreen/40 to-mygreen/0 to-60%  transition-opacity ${
+        className={`absolute inset-0 z-0 scale-125 bg-gradient-to-t from-mygreen/0 from-40% via-mygreen/40 to-mygreen/0 to-60% dark:from-myred/0 dark:from-40% dark:via-myred/40 dark:to-60% transition-opacity ${
           encrypted ? "opacity-100 block" : "opacity-0 hidden"
         }`}
       />

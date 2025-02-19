@@ -34,10 +34,10 @@ const Nav = () => {
               key={`${href}${label}`}
               href={href}
               onClick={href === "/resume" ? handleDownload : undefined}
-              className={`text-sm sm:text-lg text-myblack hover:text-mygreen  transition-colors duration-300 lowercase ${
+              className={`text-sm sm:text-lg text-myblack hover:text-mygreen dark:hover:text-myred  transition-colors duration-300 lowercase ${
                 pathname === href
-                  ? "text-mygreen underline decoration-wavy"
-                  : "text-myblack"
+                  ? "text-mygreen dark:text-myred underline decoration-wavy"
+                  : "text-myblack dark:text-white"
               }`}
             >
               {label}
@@ -52,7 +52,7 @@ const Nav = () => {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-myblack text-xl  hover:text-mygreen transition-colors duration-300"
+              className="text-myblack dark:text-white text-xl hover:text-mygreen dark:hover:text-myred transition-colors duration-300"
             >
               <Icon />
             </Link>

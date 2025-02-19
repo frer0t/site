@@ -6,8 +6,11 @@ import Title from "./Title";
 const Header = () => {
   const pathname = usePathname();
   return (
-    <header className="flex flex-col w-full border-b-2 border-mygreen border-opacity-65 border-dashed py-4">
-      <Title sectretTitle={pathname === "/" ? "frérot ntwali" : pathname} />
+    <header className="flex flex-col w-full border-b-2 border-mygreen dark:border-myred border-opacity-65 border-dashed py-4">
+      <Title
+        className="text-6xl sm:text-8xl text-center overflow-hidden font-medium transition-colors duration-300 select-none"
+        secretTitle={pathname === "/" ? "frérot ntwali" : pathname}
+      />
       <Nav />
     </header>
   );

@@ -14,13 +14,13 @@ function Footer() {
   }, []);
 
   return (
-    <footer className="flex items-center justify-center border-t-2 border-mygreen border-opacity-65 border-dashed py-4 text-center text-xs gap-3 flex-wrap ">
+    <footer className="flex items-center justify-center border-t-2 border-mygreen dark:border-myred border-opacity-65 border-dashed py-4 text-center text-xs gap-3 flex-wrap text-myblack dark:text-white">
       <p>© 2024 - {currentYear} frérot ntwali</p>
 
       <p>
         v{process.env.VERSION} |{" "}
         <Link
-          className="text-mygreen decoration-wavy underline decoration-mygreen "
+          className="text-mygreen dark:text-myred decoration-wavy underline decoration-mygreen dark:decoration-myred font-bold "
           href={`https://github.com/iamfrerot/${process.env.NAME}/tree/${process.env.COMMIT_HASH}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -33,7 +33,7 @@ function Footer() {
         href={`https://github.com/iamfrerot/${process.env.NAME}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-myblack text-sm  hover:text-mygreen transition-colors duration-300"
+        className="text-myblack dark:text-white text-sm  hover:text-mygreen dark:hover:text-myred transition-colors duration-300"
       >
         <FaGithub />
       </Link>
