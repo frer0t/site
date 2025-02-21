@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import "@/public/global.css";
-import { imbFlexSansFont, justmeAgainDownHereFont } from "@/utils/fonts";
+import { justmeAgainDownHereFont, robotoFont } from "@/utils/fonts";
 import { AnimatePresence } from "motion/react";
 import type { Metadata, Viewport } from "next";
 
@@ -109,6 +109,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  metadataBase: new URL("https://frerotntwali.com"),
 };
 export const viewport: Viewport = {
   colorScheme: "dark light",
@@ -132,9 +133,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${justmeAgainDownHereFont.variable} ${imbFlexSansFont.className} antialiased`}
+      className={`${justmeAgainDownHereFont.variable} ${robotoFont.className} antialiased`}
     >
-      <body className="flex flex-col">
+      <body className="flex flex-col selection:bg-mygreen/70 selection:text-white dark:selection:bg-myred dark:selection:text-white">
         <AnimatePresence mode="wait">{children}</AnimatePresence>
         <Footer />
       </body>

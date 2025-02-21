@@ -15,7 +15,7 @@ function Footer() {
 
   return (
     <footer className="flex items-center justify-center border-t-2 border-mygreen dark:border-myred border-opacity-65 border-dashed py-4 text-center text-xs gap-3 flex-wrap text-myblack dark:text-white">
-      <p>© 2024 - {currentYear} frérot ntwali</p>
+      <p>© {currentYear} frérot ntwali</p>
 
       <p>
         v{process.env.VERSION} |{" "}

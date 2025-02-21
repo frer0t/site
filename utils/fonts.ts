@@ -1,4 +1,4 @@
-import { IBM_Plex_Sans, Just_Me_Again_Down_Here } from "next/font/google";
+import { Just_Me_Again_Down_Here, Roboto } from "next/font/google";
 
 const justmeAgainDownHereFont = Just_Me_Again_Down_Here({
   subsets: ["latin"],
@@ -6,8 +6,11 @@ const justmeAgainDownHereFont = Just_Me_Again_Down_Here({
   weight: ["400"],
 });
 
-const imbFlexSansFont = IBM_Plex_Sans({
+export { justmeAgainDownHereFont };
+
+const robotoFont = Roboto({
   subsets: ["latin"],
-  weight: ["400", "100", "200", "300", "500", "600", "700"],
+  variable: "--font-roboto",
+  weight: ["400", "100", "300", "500", "700", "900"],
 });
-export { imbFlexSansFont, justmeAgainDownHereFont };
+export { robotoFont };
