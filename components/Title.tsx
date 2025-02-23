@@ -5,8 +5,8 @@ import { useEffect, useRef, useState } from "react";
 
 const CYCLES_PER_LETTER = 2;
 const SHUFFLE_TIME = 80;
-const START_TEXT = "@#^&$fA$^fh2j:{Q|/#?*}~";
-const CHARS = "@#^&$fA$^fh2j:{Q|/#?*}~";
+const START_TEXT = "@#^&$fa1^fh2:";
+const CHARS = "@#^&$fa1^fh2:";
 
 const Title = ({
   secretTitle,
