@@ -1,22 +1,17 @@
-"use client";
 import { formatDistanceToNow } from "date-fns";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa6";
+import Switch from "./SwitchMode";
 function Footer() {
   const commitDate = new Date(process.env.COMMIT_DATE!);
-  const [currentYear, setCurrentYear] = useState<string | null>(null);
+
   const formattedCommitDate = formatDistanceToNow(commitDate, {
     addSuffix: true,
   });
-  useEffect(() => {
-    setCurrentYear(new Date().getFullYear().toString());
-  }, []);
 
   return (
     <footer className="flex items-center justify-center border-t-2 border-mygreen dark:border-myred border-opacity-65 border-dashed py-4 px-2 text-center text-xs gap-3 flex-wrap text-myblack dark:text-white">
-      <p>© {currentYear} frérot ntwali</p>
-
+      <p>© {new Date().getFullYear().toString()} frérot ntwali</p>
       <p>
         v{process.env.VERSION} |{" "}
         <Link
@@ -37,6 +32,7 @@ function Footer() {
       >
         <FaGithub />
       </Link>
+      <Switch />
     </footer>
   );
 }

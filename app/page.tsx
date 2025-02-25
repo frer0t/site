@@ -1,4 +1,5 @@
 import Career from "@/components/Career";
+import CopyToClipBoard from "@/components/CopyToClipBoard";
 import Header from "@/components/Header";
 import HighlightText from "@/components/HighlightText";
 import Href from "@/components/Href";
@@ -25,10 +26,10 @@ export default async function HomePage() {
             className="rounded-lg aspect-square object-cover border-2 border-mygreen dark:border-myred border-opacity-65 border-dashed h-fit"
           />
 
-          <div className="text-myblack dark:text-white/80 md:max-w-[36rem] flex flex-col gap-2 leading-[1.8]">
+          <div className="text-myblack dark:text-white/80 max-w-[36rem] flex flex-col gap-2 leading-[1.8]">
             <p>
               <span className="font-semibold text-md dark:text-white">
-                hi,i&apos;m frérot ntwali
+                hi, i&apos;m frérot ntwali
               </span>
               , i started software engineering in 2023, with{" "}
               <Href to="https://www.andela.com/blog-posts/andela-technical-leadership-program-investing-in-africas-tech-ecosystem-through-talent-development">
@@ -51,6 +52,9 @@ export default async function HomePage() {
                 monkeytype.
               </Href>
             </p>
+            <CopyToClipBoard text="me@frerot.dev">
+              ✉️ me[at]frerot.dev
+            </CopyToClipBoard>
             <div className="prose dark:prose-stone">
               <Hobbies />
             </div>
