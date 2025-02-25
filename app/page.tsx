@@ -2,13 +2,12 @@ import Career from "@/components/Career";
 import Header from "@/components/Header";
 import HighlightText from "@/components/HighlightText";
 import Href from "@/components/Href";
+import CareerLoader from "@/components/Loaders/CareerLoader";
 import Hobbies from "@/components/mdx/Hobbies.mdx";
 import * as motion from "motion/react-client";
 import Image from "next/image";
+import { Suspense } from "react";
 export default async function HomePage() {
-  const data = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/career`);
-  const career_data = await data.json();
-
   return (
     <main>
       <Header />
@@ -61,8 +60,11 @@ export default async function HomePage() {
           <h1 className="text-7xl font-medownhere mb-6 md:text-center ">
             <HighlightText>career</HighlightText>
           </h1>
+
           <div className="grid xl:grid-cols-2 xl:gap-6">
-            <Career career={career_data} />
+            <Suspense fallback={<CareerLoader />} name="career">
+              <Career />
+            </Suspense>
           </div>
         </div>
       </motion.div>

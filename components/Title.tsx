@@ -1,5 +1,5 @@
 "use client";
-import clx from "clsx";
+import { cn } from "@/utils/cn";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
@@ -61,7 +61,7 @@ const Title = ({
 
   return (
     <motion.h1
-      className={clx(
+      className={cn(
         "group relative font-medownhere lowercase",
         encrypted
           ? "text-mygreen dark:text-myred"

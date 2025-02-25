@@ -1,7 +1,20 @@
 import { format, intervalToDuration, parseISO } from "date-fns";
+import CareerError from "./Errors/CareerError";
 import Href from "./Href";
 
-const Career = ({ career }: { career: ICareer[] }) => {
+const Career = async () => {
+  let career_data: ICareer[] = [];
+
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/career`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    career_data = await response.json();
+  } catch (error) {
+    return <CareerError error={error as Error} />;
+  }
+
   const getDuration = (startDate: string, endDate?: string) => {
     const durationObj = intervalToDuration({
       start: parseISO(startDate),
@@ -23,7 +36,7 @@ const Career = ({ career }: { career: ICareer[] }) => {
   };
   return (
     <>
-      {career.map((job, index) => (
+      {career_data.map((job, index) => (
         <div key={index} className="prose prose-indigo dark:prose-invert py-2">
           <h3 className="mt-2">{job.role}</h3>
           <p className="text-myblack/65 dark:text-white/65 ">

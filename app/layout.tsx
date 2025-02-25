@@ -85,7 +85,7 @@ export const metadata: Metadata = {
       },
       {
         url: "/me.jpg",
-        type: "image/jpeg",
+        type: "image/jpg",
         alt: "frérot ntwali",
       },
     ],
@@ -104,12 +104,14 @@ export const metadata: Metadata = {
       },
       {
         url: "/me.jpg",
-        type: "image/jpeg",
+        type: "image/jpg",
         alt: "frérot ntwali",
       },
     ],
   },
-  metadataBase: new URL("https://frerotntwali.com"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_URL || "https://frerotntwali.com"
+  ),
 };
 export const viewport: Viewport = {
   colorScheme: "dark light",
