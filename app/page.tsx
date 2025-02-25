@@ -1,15 +1,22 @@
+import Career from "@/components/Career";
 import Header from "@/components/Header";
 import HighlightText from "@/components/HighlightText";
 import Href from "@/components/Href";
 import Hobbies from "@/components/mdx/Hobbies.mdx";
 import * as motion from "motion/react-client";
 import Image from "next/image";
-export default function HomePage() {
+export default async function HomePage() {
+  const data = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/career`);
+  const career_data = await data.json();
+
   return (
     <main>
       <Header />
-      <motion.div key={2} className="flex flex-col p-4 md:py-4 gap-3 ">
-        <div className="flex flex-col  md:p-0 md:flex-row md:flex-wrap gap-8 justify-center">
+      <motion.div
+        key={2}
+        className="flex flex-col p-4 md:py-4 gap-3 md:items-center "
+      >
+        <div className="flex flex-col  md:p-0 md:flex-row md:justify-center md:flex-wrap gap-8 ">
           <Image
             src={"/me.jpg"}
             width={380}
@@ -18,9 +25,10 @@ export default function HomePage() {
             alt="frérot ntwali's picture"
             className="rounded-lg aspect-square object-cover border-2 border-mygreen dark:border-myred border-opacity-65 border-dashed h-fit"
           />
+
           <div className="text-myblack dark:text-white/80 md:max-w-[36rem] flex flex-col gap-2 leading-[1.8]">
             <p>
-              <span className=" font-semibold text-xl dark:text-white">
+              <span className="font-semibold text-md dark:text-white">
                 hi,i&apos;m frérot ntwali
               </span>
               , i started software engineering in 2023, with{" "}
@@ -49,10 +57,13 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center ">
-          <h1 className="text-5xl font-medownhere">
+        <div className="flex flex-col ">
+          <h1 className="text-7xl font-medownhere mb-6 md:text-center ">
             <HighlightText>career</HighlightText>
           </h1>
+          <div className="grid xl:grid-cols-2 xl:gap-6">
+            <Career career={career_data} />
+          </div>
         </div>
       </motion.div>
     </main>

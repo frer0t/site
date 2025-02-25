@@ -1,15 +1,11 @@
 "use client";
-import { navigate } from "@/app/action";
+import { navigate } from "@/app/actions/navigate";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const NotFound = () => {
-  const pathname = usePathname();
-  const [path, setPath] = useState(pathname);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
@@ -64,24 +60,17 @@ const NotFound = () => {
           <input
             type="text"
             name="route"
-            value={path}
-            onChange={(e) => setPath(e.target.value)}
             placeholder="correct your mistake"
-            className="w-full p-4 text-center text-2xl text-myblack dark:text-white 
+            className="w-full p-4 text-center text-lg sm:text-xl lg:text-2xl text-myblack dark:text-white 
               bg-transparent outline-none transition-all duration-300
               border-b-2 border-transparent hover:border-gray-300 focus:border-gray-500
               focus:outline-none placeholder:opacity-50"
-            autoFocus
-            onFocus={(e) => {
-              const len = e.target.value.length;
-              e.target.setSelectionRange(len, len);
-            }}
             autoCapitalize="off"
             autoComplete="off"
             autoCorrect="off"
             spellCheck="false"
+            autoFocus
           />
-          <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-gray-500 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
         </form>
       </div>
     </main>

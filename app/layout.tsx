@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "portfolio",
     "blog",
   ],
-  authors: [{ name: "frérot ntwali", url: "https://frerotntwali.com" }],
+  authors: [{ name: "frérot ntwali", url: process.env.NEXT_PUBLIC_URL }],
   publisher: "frérot ntwali",
   creator: "frérot ntwali",
   icons: {
@@ -135,7 +135,7 @@ export default function RootLayout({
       lang="en"
       className={`${justmeAgainDownHereFont.variable} ${robotoFont.className} antialiased`}
     >
-      <body className="flex flex-col selection:bg-mygreen/70 selection:text-white dark:selection:bg-myred dark:selection:text-white">
+      <body className="flex flex-col selection:bg-mygreen/70 selection:text-white dark:selection:bg-myred dark:selection:text-white lowercase">
         <AnimatePresence mode="wait">{children}</AnimatePresence>
         <Footer />
       </body>
