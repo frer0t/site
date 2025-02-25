@@ -1,23 +1,47 @@
-export default [
+const projects: IProject[] = [
   {
-    title: "Userverse",
-    description:
-      "Userverse is a Java-based application that uses Spring Boot and MongoDB. The project is built using Maven and is containerized using Docker. This project provides an API for data analysis.",
-    link: "https://userverse.apidocumentation.com/reference",
-    stacks: ["mongodb", "java", "spring-boot", "swagger", "javafaker"],
+    name: "gobi platform",
+    description: "Get There. Send It. Move Smarter with Gobi.",
+    demo: "https://gobi.rw",
+    tech: "web",
+    type: "product",
+    status: "in-progress",
+    size: "l",
+    cover: "/projects/gobi.png",
   },
   {
-    title: "Locus Program",
-    description:
-      "Salim's Entrepreneurship Program empowers aspiring entrepreneurs to start, grow, and manage successful ventures. With practical workshops and expert mentorship, participants master business planning, market research, finance, and marketing—turning ideas into thriving businesses.",
-    link: "https://locus.frerot.dev/",
-    stacks: ["React", "tailwind-css", "Framer", "Email-js", "React-Hook-Form"],
+    name: "userverse",
+    description: "creating api for data analytics including user management.",
+    demo: "https://userverse.apidocumentation.com/reference",
+    github: "https://github.com/iamfrerot/userverse",
+    tech: "backend",
+    size: "l",
+    type: "oss",
+    status: "in-progress",
+    cover: "/projects/userverse.png",
   },
   {
-    title: "envario",
+    name: "Locus Program",
+    description: "personal website for salim, an entrepreneur.",
+    demo: "https://locus.frerot.dev/",
+    tech: "web",
+    type: "client",
+    status: "completed",
+    size: "s",
+    cover: "/projects/locus.png",
+  },
+  {
+    name: "envario",
     description:
-      "Envario is a command-line tool for validating environment variables against a schema. It helps ensure that your .env files are well-structured and contain all the necessary values in the right format.",
-    link: "https://www.npmjs.com/package/envario",
-    stacks: ["typscript", "commander", "chalk"],
+      "a command-line tool for validating env variables against a schema.",
+    demo: "https://www.npmjs.com/package/envario",
+    github: "https://github.com/iamfrerot/envario",
+    tech: "package",
+    type: "oss",
+    status: "in-progress",
+    size: "s",
+    cover: "/projects/envario.png",
   },
 ];
+
+export default projects;

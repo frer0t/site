@@ -3,7 +3,7 @@ import CopyToClipBoard from "@/components/CopyToClipBoard";
 import Header from "@/components/Header";
 import HighlightText from "@/components/HighlightText";
 import Href from "@/components/Href";
-import CareerLoader from "@/components/Loaders/CareerLoader";
+import CareerSkeleton from "@/components/Skeletons/CareerSkeleton";
 import Hobbies from "@/components/mdx/Hobbies.mdx";
 import * as motion from "motion/react-client";
 import Image from "next/image";
@@ -66,7 +66,7 @@ export default async function HomePage() {
           </h1>
 
           <div className="grid xl:grid-cols-2 xl:gap-6">
-            <Suspense fallback={<CareerLoader />} name="career">
+            <Suspense fallback={<CareerSkeleton />} name="career">
               <Career />
             </Suspense>
           </div>

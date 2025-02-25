@@ -1,5 +1,5 @@
 import { Skeleton, SkeletonLine } from "../Skeleton";
-const CareerLoader = () => {
+const CareerSkeleton = () => {
   return (
     <>
       <Skeleton className="min-w-[35rem] space-y-2.5 py-2">
@@ -26,4 +26,4 @@ const CareerLoader = () => {
   );
 };
 
-export default CareerLoader;
+export default CareerSkeleton;

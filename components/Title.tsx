@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/utils/cn";
-import { motion } from "framer-motion";
+import * as motion from "motion/react-client";
 import { useEffect, useRef, useState } from "react";
 
 const CYCLES_PER_LETTER = 2;

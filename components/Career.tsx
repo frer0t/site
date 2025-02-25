@@ -1,4 +1,5 @@
-import { format, intervalToDuration, parseISO } from "date-fns";
+import getduration from "@/utils/getduration";
+import { format, parseISO } from "date-fns";
 import CareerError from "./Errors/CareerError";
 import Href from "./Href";
 
@@ -15,25 +16,6 @@ const Career = async () => {
     return <CareerError error={error as Error} />;
   }
 
-  const getDuration = (startDate: string, endDate?: string) => {
-    const durationObj = intervalToDuration({
-      start: parseISO(startDate),
-      end: endDate ? parseISO(endDate) : new Date(),
-    });
-
-    let durationStr = "";
-
-    if (durationObj && durationObj.years) {
-      if (durationObj.years > 1) {
-        durationStr = `${durationObj.years} yrs `;
-      } else if (durationObj.years === 1) {
-        durationStr = `${durationObj.years} yr `;
-      }
-    }
-    durationStr += `${durationObj.months} mos`;
-
-    return durationStr;
-  };
   return (
     <>
       {career_data.map((job, index) => (
@@ -56,7 +38,7 @@ const Career = async () => {
               {job.end ? format(parseISO(job.end), "LLL yyyy") : "Present"}
             </span>
             <span> • </span>
-            <span>{getDuration(job.start, job.end)}</span>
+            <span>{getduration(job.start, job.end)}</span>
           </p>
         </div>
       ))}

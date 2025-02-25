@@ -5,7 +5,7 @@ import { CiLink } from "react-icons/ci";
 const Href = ({ to, children }: { to: string; children: ReactNode }) => {
   return (
     <Link
-      className="inline-flex hover:decoration-wavy  text-mygreen dark:text-myred font-bold "
+      className="inline-flex hover:underline hover:decoration-wavy  text-mygreen dark:text-myred font-bold"
       href={to}
       target="_blank"
     >

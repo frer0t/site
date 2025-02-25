@@ -29,6 +29,9 @@ export default {
           900: "#1c222b",
         },
       },
+      screens: {
+        xs: "450px",
+      },
     },
   },
   plugins: [typography],

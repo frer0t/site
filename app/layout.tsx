@@ -6,7 +6,7 @@ import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s << frérot ntwali's personal website",
+    template: "%s >> frérot ntwali's personal website",
     default: "frérot ntwali's personal website",
   },
   description: "frérot ntwali's personal website and portfolio",

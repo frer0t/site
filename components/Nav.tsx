@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 const links = [
   { href: "/", label: "home" },
-  { href: "/resume", label: "resume" },
+  { href: "/portfolio", label: "portfolio" },
   { href: "/blog", label: "blog" },
   { href: "/identity", label: "identity" },
 ];
@@ -14,16 +14,6 @@ const socials = [
   { href: "https://github.com/iamfrerot", Icon: FaGithub },
 ];
 const Nav = () => {
-  const handleDownload = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const link = document.createElement("a");
-    link.href = "/resume.pdf";
-    link.download = "frérot ntwali's resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   const pathname = usePathname();
   return (
     <nav className="flex justify-center items-center flex-wrap gap-x-8 gap-y-3 p-1">
@@ -33,7 +23,7 @@ const Nav = () => {
             <Link
               key={`${href}${label}`}
               href={href}
-              onClick={href === "/resume" ? handleDownload : undefined}
+              title={`navigate to ${label}`}
               className={`text-sm sm:text-lg text-myblack hover:text-mygreen dark:hover:text-myred  transition-colors duration-300 lowercase ${
                 pathname === href
                   ? "text-mygreen dark:text-myred underline decoration-wavy"
