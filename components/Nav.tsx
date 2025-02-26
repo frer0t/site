@@ -7,7 +7,7 @@ const links = [
   { href: "/", label: "home" },
   { href: "/portfolio", label: "portfolio" },
   { href: "/blog", label: "blog" },
-  { href: "/identity", label: "identity" },
+  // { href: "/identity", label: "identity" },
 ];
 const socials = [
   { href: "https://linkedin.com/in/frerotntwali", Icon: FaLinkedin },
