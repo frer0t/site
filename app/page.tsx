@@ -38,7 +38,7 @@ export default async function HomePage() {
             </p>
             <p>
               i&apos;m currently{" "}
-              <HighlightText>frontend engineer</HighlightText> at{" "}
+              <HighlightText>Software engineer</HighlightText> at{" "}
               <Href to="https://gobi.rw">gobi.</Href> before that, i was{" "}
               <HighlightText>backend engineer</HighlightText> at{" "}
               <Href to="https://edencaremedical.com">eden care medical.</Href>

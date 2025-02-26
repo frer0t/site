@@ -15,7 +15,7 @@ const projects: IProject[] = [
     demo: "https://userverse.apidocumentation.com/reference",
     github: "https://github.com/iamfrerot/userverse",
     tech: "backend",
-    size: "l",
+    size: "m",
     type: "oss",
     status: "in-progress",
     cover: "/projects/userverse.png",

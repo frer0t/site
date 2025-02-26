@@ -61,11 +61,14 @@ const Projects = async () => {
             <p className="text-sm text-myblack/40 dark:text-white/40">
               {project.description}
             </p>
-            <ul className="flex flex-wrap gap-1">
+            <div className="flex flex-wrap gap-1">
               <Badge color="orange">{project.type}</Badge>
               <Badge color="green">{project.tech}</Badge>
               <Badge color="blue">{project.status}</Badge>
-            </ul>
+              <Badge color="purple" className="uppercase">
+                {project.size}
+              </Badge>
+            </div>
           </div>
         </motion.div>
       ))}

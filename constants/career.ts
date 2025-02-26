@@ -1,6 +1,6 @@
 export default [
   {
-    role: "Frontend Engineer",
+    role: "Software Engineer",
     company: "Gobi",
     companyLink: "https://www.gobi.rw/",
     location: "Remote,Kigali",
