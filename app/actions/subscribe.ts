@@ -2,7 +2,7 @@
 import resend from "@/utils/Resend";
 import { z } from "zod";
 const audienceId = process.env.RESEND_AUDIENCE_ID as string;
-export default async function (prevState: object, data: FormData) {
+const subscribe = async function (prevState: object, data: FormData) {
   console.log(prevState);
   const schema = z.object({
     email: z.string().email(),
@@ -23,4 +23,5 @@ export default async function (prevState: object, data: FormData) {
     console.log(reponse.error);
   }
   return { message: "Subscribed successfully", success: true };
-}
+};
+export default subscribe;
