@@ -9,7 +9,8 @@ export const metadata: Metadata = {
     template: "%s >> frérot ntwali's personal website",
     default: "frérot ntwali's personal website",
   },
-  description: "frérot ntwali's personal website and portfolio",
+  description:
+    "hi, i'm frérot ntwali, i started software engineering in 2023, with andela (ATLP). i'm currently Software engineer at gobi. before that, i was backend engineer at eden care medical. i ❤️ lowercase, side projects and monkeytype.",
   keywords: [
     "frérot ntwali",
     "software engineer",
@@ -76,7 +77,8 @@ export const metadata: Metadata = {
       template: "%s << frérot ntwali's personal website",
       default: "frérot ntwali's personal website",
     },
-    description: "frérot ntwali's personal website and portfolio",
+    description:
+      "hi, i'm frérot ntwali, i started software engineering in 2023, with andela (ATLP). i'm currently Software engineer at gobi. before that, i was backend engineer at eden care medical. i ❤️ lowercase, side projects and monkeytype.",
     images: [
       {
         url: "/logo-light.svg",
@@ -84,7 +86,12 @@ export const metadata: Metadata = {
         alt: "frérot ntwali's logo",
       },
       {
-        url: "/me.jpg",
+        url: "/me-light.jpeg",
+        type: "image/jpg",
+        alt: "frérot ntwali",
+      },
+      {
+        url: "/me-dark.jpeg",
         type: "image/jpg",
         alt: "frérot ntwali",
       },
@@ -94,7 +101,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary",
     creator: "frérot ntwali",
-    description: "frérot ntwali's personal website and portfolio",
+    description:
+      "hi, i'm frérot ntwali, i started software engineering in 2023, with andela (ATLP). i'm currently Software engineer at gobi. before that, i was backend engineer at eden care medical. i ❤️ lowercase, side projects and monkeytype.",
     title: "frérot ntwali's personal website",
     images: [
       {
@@ -103,8 +111,18 @@ export const metadata: Metadata = {
         alt: "frérot ntwali's logo",
       },
       {
-        url: "/me.jpg",
-        type: "image/jpg",
+        url: "/logo-dark.svg",
+        type: "image/svg+xml",
+        alt: "frérot ntwali's logo",
+      },
+      {
+        url: "/me-light.jpeg",
+        type: "image/jpeg",
+        alt: "frérot ntwali",
+      },
+      {
+        url: "/me-dark.jpeg",
+        type: "image/jpeg",
         alt: "frérot ntwali",
       },
     ],

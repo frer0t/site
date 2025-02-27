@@ -18,12 +18,20 @@ export default async function HomePage() {
       >
         <div className="flex flex-col  md:p-0 md:flex-row md:justify-center md:flex-wrap gap-8 ">
           <Image
-            src={"/me.jpg"}
+            src={"/me-light.jpeg"}
             width={380}
             height={380}
-            priority
+            priority={true}
             alt="frérot ntwali's picture"
-            className="rounded-lg aspect-square object-cover border-2 border-mygreen dark:border-myred border-opacity-65 border-dashed h-fit"
+            className="rounded-lg aspect-square object-cover border-2 border-mygreen dark:border-myred border-opacity-65 border-dashed h-fit dark:hidden"
+          />
+          <Image
+            src={"/me-dark.jpeg"}
+            width={380}
+            height={380}
+            priority={true}
+            alt="frérot ntwali's picture"
+            className="rounded-lg aspect-square object-cover border-2 border-mygreen dark:border-myred border-opacity-65 border-dashed h-fit hidden dark:block"
           />
 
           <div className="text-myblack dark:text-white/80 max-w-[36rem] flex flex-col gap-2 leading-[1.8]">

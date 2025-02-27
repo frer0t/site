@@ -18,6 +18,7 @@ export default [
     companyLink: "https://www.edencaremedical.com/",
     location: "Remote, Kigali",
     start: "2024-10-07",
+    end: "2025-02-28",
     done: [
       "Built backend systems with Spring boot and Java",
       "Developed REST APIs for core functionalities",
