@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/utils/cn";
 import { forwardRef, HTMLAttributes } from "react";
-import skeletonTheme from "./Theme";
+import skeletonTheme from "./theme";
 
 interface SkeletonProps extends HTMLAttributes<HTMLDivElement> {
   animation?: boolean;

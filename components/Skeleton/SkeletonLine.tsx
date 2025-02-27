@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/utils/cn";
 import { HTMLAttributes, forwardRef } from "react";
-import skeletonTheme from "./Theme";
+import skeletonTheme from "./theme";
 
 const SkeletonLine = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => {
