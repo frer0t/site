@@ -35,4 +35,5 @@ export default {
     },
   },
   plugins: [typography],
+  darkMode: "media",
 } satisfies Config;
