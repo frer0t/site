@@ -8,7 +8,10 @@ import { z } from "zod";
 const feedbackSchema = z.object({
   feedback: z.string().optional(),
   link: z.string().optional(),
-  initials: z.string().min(1, { message: "Initials are required" }),
+  initials: z
+    .string()
+    .min(2, { message: "initials need be more done 2 character" })
+    .max(2, { message: "Initials must be 2 characters max" }),
   message: z.string().min(1, { message: "Message is required" }),
 });
 
