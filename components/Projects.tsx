@@ -20,8 +20,8 @@ const Projects = async () => {
     <>
       {projects_data.map((project, index) => (
         <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
           key={index}
           className="flex flex-col justify-between overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white/90 dark:bg-myblack/95 border-l-2 border-dashed border-mygreen dark:border-myred backdrop-blur-sm h-full"
