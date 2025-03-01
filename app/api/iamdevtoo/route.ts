@@ -102,3 +102,12 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+export async function GET() {
+  await ConnectDb();
+  const feedbacks = await prisma.feebacks.findMany({
+    orderBy: {
+      created_at: "desc",
+    },
+  });
+  return NextResponse.json(feedbacks);
+}

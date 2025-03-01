@@ -19,3 +19,10 @@ interface IProject {
   size: "s" | "m" | "l";
   status: "in-progress" | "completed";
 }
+interface IFeedback {
+  initials: string;
+  message: string;
+  feedback?: string;
+  link?: string;
+  created_at: string;
+}
