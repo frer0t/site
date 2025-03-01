@@ -64,6 +64,7 @@ here are the fun tools i used to build this digital treehouse:
 [![React Email][ReactEmail-badge]][ReactEmail-url]
 [![React Icons][ReactIcons-badge]][ReactIcons-url]
 [![Resend][Resend-badge]][Resend-url] [![Zod][Zod-badge]][Zod-url]
+[![Prisma][Prisma-badge]][Prisma-url] [![MongoDB][MongoDB-badge]][MongoDB-url]
 
 ## how to kick things off
 
@@ -227,3 +228,9 @@ without them!
 [Zod-badge]:
   https://img.shields.io/badge/Zod-3068B7?style=for-the-badge&logo=zod&logoColor=white
 [Zod-url]: https://github.com/colinhacks/zod
+[Prisma-badge]:
+  https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white
+[Prisma-url]: https://www.prisma.io/
+[MongoDB-badge]:
+  https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white
+[MongoDB-url]: https://www.mongodb.com/
