@@ -34,6 +34,10 @@ export async function POST(req: NextRequest) {
       httpOnly: true,
       sameSite: "strict",
     });
+    cookieStore.set("language", language, {
+      httpOnly: true,
+      sameSite: "strict",
+    });
 
     return response.json({
       message: `Nice try, ${name}! But any one can click buttons! 🕹️ GET over to /api/verifydev to prove you're the real ${language} wizard! 🧙‍♂️✨`,

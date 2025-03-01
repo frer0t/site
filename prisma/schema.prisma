@@ -1,0 +1,17 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("MONGODB_URI")
+}
+model feebacks{
+  feedback_id String @id @default(uuid()) @map("_id")
+  feedback String? @default("")
+  link String? @default("")
+  initials String
+  message String
+  created_at DateTime @default(now())
+}
