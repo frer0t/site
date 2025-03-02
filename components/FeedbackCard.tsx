@@ -109,7 +109,7 @@ const FeedbackCard = ({ data, index }: { data: IFeedback; index: number }) => {
               href={link.startsWith("https") ? link : `https://${link}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-mygreen/90 dark:text-white font-medium hover:underline decoration-wavy"
+              className="text-mygreen/90 dark:text-white font-medium hover:underline decoration-wavy break-all"
             >
               {link}
             </Link>
