@@ -138,7 +138,7 @@ congrats! you've got my website running on your very own computer. how cool is
 that?
 
 <p align="right">(<a href="#readme-top">back to top ⬆️</a>)</p>
-s
+
 ## contributing
 
 got cool ideas to make this site even more awesome? i'm all ears! 👂
