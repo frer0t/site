@@ -1,3 +1,4 @@
+import baseurl from "@/utils/baseurl";
 import * as motion from "motion/react-client";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,7 +9,7 @@ import ProjectError from "./Errors/ProjectError";
 const Projects = async () => {
   let projects_data: IProject[] = [];
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/projects`);
+    const response = await fetch(`${baseurl}/api/projects`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }

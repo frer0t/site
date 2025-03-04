@@ -1,10 +1,10 @@
 "use server";
 import WelcomeSubscriberEmail from "@/emails/WelcomeSubscriber";
+import baseurl from "@/utils/baseurl";
 import resend from "@/utils/Resend";
 import { z } from "zod";
 const audienceId = process.env.RESEND_AUDIENCE_ID as string;
 const from_email = process.env.RESEND_FROM_EMAIL as string;
-const base_url = process.env.NEXT_PUBLIC_URL as string;
 
 const subscribe = async function (prevState: object, data: FormData) {
   console.log(prevState);
@@ -28,7 +28,7 @@ const subscribe = async function (prevState: object, data: FormData) {
         to: email,
         subject: "Welcome to the newsletter!",
         react: WelcomeSubscriberEmail({
-          base_url,
+          base_url: baseurl,
         }),
       });
 

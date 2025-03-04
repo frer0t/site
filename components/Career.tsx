@@ -1,3 +1,4 @@
+import baseurl from "@/utils/baseurl";
 import getduration from "@/utils/getduration";
 import { format, parseISO } from "date-fns";
 import CareerError from "./Errors/CareerError";
@@ -7,7 +8,7 @@ const Career = async () => {
   let career_data: ICareer[] = [];
 
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/career`);
+    const response = await fetch(`${baseurl}/api/career`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }

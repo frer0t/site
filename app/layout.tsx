@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import "@/public/global.css";
+import baseurl from "@/utils/baseurl";
 import { justmeAgainDownHereFont, robotoFont } from "@/utils/fonts";
 import { AnimatePresence } from "motion/react";
 import type { Metadata, Viewport } from "next";
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     "portfolio",
     "blog",
   ],
-  authors: [{ name: "frérot ntwali", url: process.env.NEXT_PUBLIC_URL }],
+  authors: [{ name: "frérot ntwali", url: baseurl }],
   publisher: "frérot ntwali",
   creator: "frérot ntwali",
   icons: {
@@ -127,9 +128,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_URL || "https://frerotntwali.com"
-  ),
+  metadataBase: new URL(baseurl),
 };
 export const viewport: Viewport = {
   colorScheme: "dark light",

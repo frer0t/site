@@ -73,35 +73,35 @@ const FeedbackCard = ({ data, index }: { data: IFeedback; index: number }) => {
               {initials}
             </span>
           </div>
-          <span className="text-mygreen/70 dark:text-white text-sm font-mono">
+          <span className="text-myblack/70 dark:text-white text-sm font-mono">
             {format(new Date(created_at), "MMM d, yyyy")}
           </span>
         </div>
       </div>
 
       <div className="space-y-2">
-        <div className="bg-white/90 dark:bg-[#000000]/10 p-4 rounded-xl border-2 border-mygreen/30 dark:border-myred/30 backdrop-blur-sm">
-          <p className="text-[#3CA189] dark:text-myred text-sm font-semibold mb-2">
+        <div className="bg-white/10 dark:bg-black/10 p-4 rounded-xl border-2 border-mygreen/10 dark:border-myred/10 backdrop-blur-sm">
+          <p className="text-mygreen dark:text-myred text-sm font-semibold mb-2">
             Message for 🌍
           </p>
-          <p className="text-[#3CA189]/90 dark:text-white font-medium">
+          <p className="text-myblack/90 dark:text-white font-medium">
             {message}
           </p>
         </div>
 
         {feedback && (
-          <div className="bg-white/90 dark:bg-[#000000]/10 p-4 rounded-xl border-2 border-mygreen/30 dark:border-myred/30 backdrop-blur-sm">
+          <div className="bg-white/10 dark:bg-black/10 p-4 rounded-xl border-2 border-mygreen/10 dark:border-myred/10 backdrop-blur-sm">
             <p className="text-mygreen dark:text-myred text-sm font-semibold mb-2">
               Adventure Thoughts 💭
             </p>
-            <p className="text-mygreen/90 dark:text-white font-medium">
+            <p className="text-myblack/90 dark:text-white font-medium">
               {feedback}
             </p>
           </div>
         )}
 
         {link && (
-          <div className="bg-white/90 dark:bg-[#000000]/10 p-4 rounded-xl border-2 border-mygreen/30 dark:border-myred/30 backdrop-blur-sm">
+          <div className="bg-white/10 dark:bg-black/10 p-4 rounded-xl border-2 border-mygreen/10 dark:border-myred/10 backdrop-blur-sm">
             <p className="text-mygreen dark:text-myred text-sm font-semibold mb-2">
               Connect With Me 🔗
             </p>
@@ -109,7 +109,7 @@ const FeedbackCard = ({ data, index }: { data: IFeedback; index: number }) => {
               href={link.startsWith("https") ? link : `https://${link}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-mygreen/90 dark:text-white font-medium hover:underline decoration-wavy break-all"
+              className="text-myblack/90 dark:text-white font-medium hover:underline decoration-wavy break-all"
             >
               {link}
             </Link>
