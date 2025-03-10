@@ -1,5 +1,5 @@
-import {baseurl} from "@/utils/staticurls";
 import getduration from "@/utils/getduration";
+import { baseurl } from "@/utils/staticurls";
 import { format, parseISO } from "date-fns";
 import CareerError from "./Errors/CareerError";
 import Href from "./Href";
@@ -8,7 +8,11 @@ const Career = async () => {
   let career_data: ICareer[] = [];
 
   try {
-    const response = await fetch(`${baseurl}/api/career`);
+    const response = await fetch(`${baseurl}/api/career`, {
+      next: {
+        revalidate: 3600,
+      },
+    });
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }

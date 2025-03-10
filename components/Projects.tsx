@@ -1,4 +1,4 @@
-import {baseurl} from "@/utils/staticurls";
+import { baseurl } from "@/utils/staticurls";
 import * as motion from "motion/react-client";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +9,11 @@ import ProjectError from "./Errors/ProjectError";
 const Projects = async () => {
   let projects_data: IProject[] = [];
   try {
-    const response = await fetch(`${baseurl}/api/projects`);
+    const response = await fetch(`${baseurl}/api/projects`, {
+      next: {
+        revalidate: 3600,
+      },
+    });
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }

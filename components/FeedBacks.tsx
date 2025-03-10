@@ -1,11 +1,15 @@
-import {baseurl} from "@/utils/staticurls";
+import { baseurl } from "@/utils/staticurls";
 import FeedBackError from "./Errors/FeedbackError";
 import FeedbackCard from "./FeedbackCard";
 
 const FeedBacks = async () => {
   let feedbacks: IFeedback[] = [];
   try {
-    const response = await fetch(`${baseurl}/api/iamdevtoo`);
+    const response = await fetch(`${baseurl}/api/iamdevtoo`, {
+      next: {
+        revalidate: 3600,
+      },
+    });
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
