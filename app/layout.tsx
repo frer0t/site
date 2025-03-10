@@ -1,27 +1,31 @@
 import Footer from "@/components/Footer";
+import { mydetails } from "@/constants/my-basic-details";
 import "@/public/global.css";
-import {baseurl} from "@/utils/staticurls";
 import { justmeAgainDownHereFont, robotoFont } from "@/utils/fonts";
+import { baseurl } from "@/utils/staticurls";
 import { AnimatePresence } from "motion/react";
 import type { Metadata, Viewport } from "next";
+const description = `hi, i'm ${mydetails.name}, i started software engineering in 2019, with hackclub. i'm currently Software engineer at gobi. before that, i was Junior Backend engineer at eden care medical. i ❤️ lowercase, side projects and monkeytype.`;
 
 export const metadata: Metadata = {
   title: {
     template: "%s >> frérot ntwali's personal website",
     default: "frérot ntwali's personal website",
   },
-  description:
-    "hi, i'm frérot ntwali, i started software engineering in 2023, with andela (ATLP). i'm currently Software engineer at gobi. before that, i was backend engineer at eden care medical. i ❤️ lowercase, side projects and monkeytype.",
+  description,
   keywords: [
-    "frérot ntwali",
+    mydetails.name,
     "software engineer",
-    "web developer",
+    "frontend engineer",
+    "backend engineer",
+    "fullstack engineer",
+    "devops engineer",
     "portfolio",
     "blog",
   ],
-  authors: [{ name: "frérot ntwali", url: baseurl }],
-  publisher: "frérot ntwali",
-  creator: "frérot ntwali",
+  authors: [{ name: mydetails.name, url: baseurl }],
+  publisher: mydetails.name,
+  creator: mydetails.name,
   icons: {
     apple: [
       {
@@ -78,8 +82,7 @@ export const metadata: Metadata = {
       template: "%s << frérot ntwali's personal website",
       default: "frérot ntwali's personal website",
     },
-    description:
-      "hi, i'm frérot ntwali, i started software engineering in 2023, with andela (ATLP). i'm currently Software engineer at gobi. before that, i was backend engineer at eden care medical. i ❤️ lowercase, side projects and monkeytype.",
+    description,
     images: [
       {
         url: "/logo-light.svg",
@@ -89,22 +92,20 @@ export const metadata: Metadata = {
       {
         url: "/me-light.jpeg",
         type: "image/jpg",
-        alt: "frérot ntwali",
+        alt: mydetails.name,
       },
       {
         url: "/me-dark.jpeg",
         type: "image/jpg",
-        alt: "frérot ntwali",
+        alt: mydetails.name,
       },
     ],
     countryName: "Rwanda",
   },
   twitter: {
     card: "summary",
-    creator: "frérot ntwali",
-    description:
-      "hi, i'm frérot ntwali, i started software engineering in 2023, with andela (ATLP). i'm currently Software engineer at gobi. before that, i was backend engineer at eden care medical. i ❤️ lowercase, side projects and monkeytype.",
-    title: "frérot ntwali's personal website",
+    creator: mydetails.name,
+    description,
     images: [
       {
         url: "/logo-light.svg",
@@ -119,12 +120,12 @@ export const metadata: Metadata = {
       {
         url: "/me-light.jpeg",
         type: "image/jpeg",
-        alt: "frérot ntwali",
+        alt: mydetails.name,
       },
       {
         url: "/me-dark.jpeg",
         type: "image/jpeg",
-        alt: "frérot ntwali",
+        alt: mydetails.name,
       },
     ],
   },

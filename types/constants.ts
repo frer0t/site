@@ -6,7 +6,6 @@ interface ICareer {
   start: string;
   end?: string;
   done: string[];
-  stack: string[];
 }
 interface IProject {
   name: string;

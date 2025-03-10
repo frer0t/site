@@ -39,16 +39,14 @@ export default async function HomePage() {
               <span className="font-semibold text-md dark:text-white">
                 hi, i&apos;m frérot ntwali
               </span>
-              , i started software engineering in 2023, with{" "}
-              <Href to="https://www.andela.com/blog-posts/andela-technical-leadership-program-investing-in-africas-tech-ecosystem-through-talent-development">
-                andela (ATLP).
-              </Href>
+              , i started software engineering in 2019, with{" "}
+              <Href to="https://hackclub.com">hackclub.</Href>
             </p>
             <p>
               i&apos;m currently{" "}
               <HighlightText>Software engineer</HighlightText> at{" "}
               <Href to="https://gobi.rw">gobi.</Href> before that, i was{" "}
-              <HighlightText>backend engineer</HighlightText> at{" "}
+              <HighlightText>Junior Backend engineer</HighlightText> at{" "}
               <Href to="https://edencaremedical.com">eden care medical.</Href>
             </p>
             <p>
