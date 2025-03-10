@@ -1,4 +1,4 @@
-import baseurl from "@/utils/baseurl";
+import {baseurl} from "@/utils/staticurls";
 import getduration from "@/utils/getduration";
 import { format, parseISO } from "date-fns";
 import CareerError from "./Errors/CareerError";

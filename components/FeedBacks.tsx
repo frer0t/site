@@ -1,4 +1,4 @@
-import baseurl from "@/utils/baseurl";
+import {baseurl} from "@/utils/staticurls";
 import FeedBackError from "./Errors/FeedbackError";
 import FeedbackCard from "./FeedbackCard";
 

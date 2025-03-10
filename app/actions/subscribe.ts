@@ -1,6 +1,6 @@
 "use server";
 import WelcomeSubscriberEmail from "@/emails/WelcomeSubscriber";
-import baseurl from "@/utils/baseurl";
+import {baseurl} from "@/utils/staticurls";
 import resend from "@/utils/Resend";
 import { z } from "zod";
 const audienceId = process.env.RESEND_AUDIENCE_ID as string;

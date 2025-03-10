@@ -1,4 +1,4 @@
-import baseurl from "@/utils/baseurl";
+import {baseurl} from "@/utils/staticurls";
 import * as motion from "motion/react-client";
 import Image from "next/image";
 import Link from "next/link";

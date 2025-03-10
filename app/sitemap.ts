@@ -1,4 +1,4 @@
-import baseurl from "@/utils/baseurl";
+import {baseurl} from "@/utils/staticurls";
 import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

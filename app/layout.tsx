@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import "@/public/global.css";
-import baseurl from "@/utils/baseurl";
+import {baseurl} from "@/utils/staticurls";
 import { justmeAgainDownHereFont, robotoFont } from "@/utils/fonts";
 import { AnimatePresence } from "motion/react";
 import type { Metadata, Viewport } from "next";
