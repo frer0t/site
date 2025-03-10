@@ -3,8 +3,8 @@ import subscribe from "@/app/actions/subscribe";
 import { useActionState } from "react";
 const SubscribeForm = () => {
   const initialState = { message: "", success: false };
-
   const [state, formAction, pending] = useActionState(subscribe, initialState);
+
   return (
     <form action={formAction} className="flex flex-col gap-3 " noValidate>
       <div className="relative">

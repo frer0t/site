@@ -15,22 +15,21 @@ import {
 export const WelcomeSubscriberEmail = ({ base_url }: { base_url: string }) => {
   return (
     <Html>
-      <Head>
-        <meta
-          name="theme-color"
-          media="(prefers-color-scheme: light)"
-          content="rgb(60, 161, 137)"
-        />
-        <meta
-          name="theme-color"
-          media="(prefers-color-scheme: dark)"
-          content="rgb(122, 84, 121)"
-        />
-        <meta name="color-scheme" content="light dark" />
-        <title>frérot ntwali's newsletter</title>
-      </Head>
       <Tailwind>
-        <Head />
+        <Head>
+          <meta
+            name="theme-color"
+            media="(prefers-color-scheme: light)"
+            content="rgb(60, 161, 137)"
+          />
+          <meta
+            name="theme-color"
+            media="(prefers-color-scheme: dark)"
+            content="rgb(122, 84, 121)"
+          />
+          <meta name="color-scheme" content="light dark" />
+          <title>frérot ntwali's newsletter</title>
+        </Head>
         <Body className="bg-[#f6f9fc] dark:bg-[#1a1a1a] font-sans">
           <Preview>
             Woohoo! You're in! 🎉 Get ready for some awesome content!
