@@ -68,6 +68,7 @@ export async function POST(
     expiresIn: "1day",
   });
   cookieStore.set("iamdevtoo", token);
+  cookieStore.set("mode", "true");
   return response.json(
     {
       message:

@@ -1,47 +1,58 @@
 "use client";
-import { useState } from "react";
 
-export default function Switch({
-  onChange,
-}: {
-  onChange?: (checked: boolean) => void;
-}) {
+import updateusermode from "@/app/actions/updateusermode";
+import { cn } from "@/utils/cn";
+import { useEffect, useState } from "react";
+
+export default function Switch() {
   const [checked, setChecked] = useState(true);
 
-  const handleChange = () => {
+  useEffect(() => {
+    // Get initial mode from cookie on client side
+    const mode = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("mode="))
+      ?.split("=")[1];
+
+    setChecked(mode === "true" ? true : false);
+  }, []);
+
+  const handleToggle = async () => {
     const newChecked = !checked;
     setChecked(newChecked);
-    onChange?.(newChecked);
+    await updateusermode(newChecked);
   };
 
   return (
-    <label
-      className={`flex items-center cursor-pointer gap-2 ${
-        checked
-          ? "text-mygreen dark:text-myred"
-          : "text-myblack dark:text-white"
-      } transition-all duration-300`}
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleToggle();
+      }}
     >
-      <span>dev</span>
-      <div className="relative">
-        <input
-          type="checkbox"
-          className="sr-only"
-          checked={checked}
-          onChange={handleChange}
-        />
-        <div
-          className={`block w-8 h-2 rounded-full transition-colors duration-300 ${
-            checked ? "bg-mygreen dark:bg-myred" : "bg-gray-300"
-          }`}
-        />
-        <div
-          className={`absolute -top-[2px] bg-myblack dark:bg-white w-3 h-3 rounded-full transition-transform duration-300 ${
-            checked ? "transform translate-x-6" : ""
-          }`}
-        />
-      </div>
-      <span>reader</span>
-    </label>
+      <label
+        className={`flex items-center cursor-pointer gap-2 transition-all duration-300`}
+      >
+        <span className={cn(!checked && "text-mygreen dark:text-myred")}>
+          dev
+        </span>
+        <button type="submit" className="relative">
+          <div
+            className={`block w-8 h-2 rounded-full transition-colors duration-300 ${cn(
+              "bg-gray-300",
+              checked && "bg-mygreen dark:bg-myred"
+            )}`}
+          />
+          <div
+            className={`absolute -top-[2px] bg-myblack dark:bg-white w-3 h-3 rounded-full transition-transform duration-300 ${cn(
+              checked && "transform translate-x-6"
+            )}`}
+          />
+        </button>
+        <span className={cn(checked && "text-mygreen dark:text-myred")}>
+          reader
+        </span>
+      </label>
+    </form>
   );
 }

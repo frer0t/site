@@ -11,7 +11,7 @@ const page = () => {
   return (
     <main>
       <Header secretTitle="/devs 💻" />
-      <div className="grid xs:grid-cols-2 md:grid-cols-3 gap-3 py-5 px-3 overflow-y-hidden ">
+      <div className="grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 py-5 px-3 overflow-y-hidden ">
         <Suspense name="devs" fallback={<FeedbackSkeleton />}>
           <FeedBacks />
         </Suspense>

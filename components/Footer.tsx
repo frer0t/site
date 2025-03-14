@@ -2,7 +2,7 @@
 import { formatDistanceToNow } from "date-fns";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa6";
-// import Switch from "./SwitchMode"; to be implemented later
+import Switch from "./SwitchMode";
 
 function Footer() {
   const commitDate = new Date(process.env.COMMIT_DATE!);
@@ -34,7 +34,7 @@ function Footer() {
       >
         <FaGithub />
       </Link>
-      {/* <Switch />  */}
+      <Switch />
     </footer>
   );
 }
