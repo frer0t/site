@@ -1,5 +1,8 @@
 "use client";
+import { baseurl } from "@/utils/staticurls";
 import * as motion from "motion/react-client";
+import { SiPostman } from "react-icons/si";
+import CopyToClipboard from "./CopyToClipBoard";
 const ModeDev = () => {
   return (
     <motion.main
@@ -58,6 +61,19 @@ const ModeDev = () => {
           }
         }}
       />
+      <div className="w-fit">
+        <h2 className="flex items-center gap-2 font-mono text-myblack dark:text-gray-100">
+          I dare u
+          <SiPostman height={6} width={6} className="text-orange-500" />
+        </h2>
+        <CopyToClipboard
+          text={`${baseurl}/api/start`}
+          className="backdrop-blur-sm xs:h-36 w-[20rem] sm:h-40 sm:w-[40rem] border border-dashed border-mygreen dark:border-myred  "
+          contentClassName="items-center justify-center sm:text-2xl"
+        >
+          {baseurl}/api/start
+        </CopyToClipboard>
+      </div>
     </motion.main>
   );
 };
