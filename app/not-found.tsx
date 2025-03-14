@@ -1,8 +1,9 @@
 "use client";
-import { navigate } from "@/app/actions/navigate";
+
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { navigate } from "./actions/navigate";
 
 const NotFound = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -56,7 +57,11 @@ const NotFound = () => {
         <h2 className="mb-8 text-lg sm:text-xl lg:text-2xl text-myblack dark:text-white opacity-75 animate-slide-up">
           Oops! Page not found
         </h2>
-        <form action={navigate} className="w-full max-w-xl relative group">
+        <form
+          action={navigate}
+          method="POST"
+          className="w-full max-w-xl relative group"
+        >
           <input
             type="text"
             name="route"
