@@ -1,9 +1,29 @@
 "use client";
 import { baseurl } from "@/utils/staticurls";
 import * as motion from "motion/react-client";
+import { useEffect, useState } from "react";
 import { SiPostman } from "react-icons/si";
+import { TbInfoSquareRounded } from "react-icons/tb";
 import CopyToClipboard from "./CopyToClipBoard";
-const ModeDev = () => {
+import toast from "./ui/Toast";
+const ModeDev = ({ paramsMessage }: { paramsMessage: string }) => {
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    if (paramsMessage) {
+      setMessage(paramsMessage);
+    }
+  }, [paramsMessage]);
+
+  useEffect(() => {
+    if (message) {
+      toast({
+        description: message,
+        icon: <TbInfoSquareRounded />,
+      });
+    }
+  }, [message]);
+
   return (
     <motion.main
       key={1}

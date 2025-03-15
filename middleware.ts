@@ -29,5 +29,5 @@ export function middleware(request: NextRequest) {
 
 // Specify which paths this middleware should run on
 export const config = {
-  matcher: ["/portfolio", "/blog", "/identity", "/iamdevtoo"],
+  matcher: ["/portfolio", "/blog", "/identity", "/iamdevtoo", "/home"],
 };

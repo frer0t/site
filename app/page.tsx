@@ -11,14 +11,19 @@ import * as motion from "motion/react-client";
 import { cookies } from "next/headers";
 import Image from "next/image";
 import { Suspense } from "react";
-export default async function HomePage() {
+type PageProps = {
+  searchParams: Promise<{ message: string }>;
+};
+export default async function HomePage({ searchParams }: PageProps) {
   const cookieStore = await cookies();
   const mode = cookieStore.get("mode")?.value;
+  const queryParams = await searchParams;
+  const message = queryParams.message;
 
   return (
     <AnimatePresence mode="wait">
       {(mode as string) === "false" ? (
-        <ModeDev />
+        <ModeDev paramsMessage={message as string} />
       ) : (
         <motion.main
           key={2}
