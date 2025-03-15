@@ -2,10 +2,12 @@
 
 import updateusermode from "@/app/actions/updateusermode";
 import { cn } from "@/utils/cn";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Switch() {
   const [checked, setChecked] = useState(true);
+  const pathname = usePathname();
 
   useEffect(() => {
     // Get initial mode from cookie on client side
@@ -20,7 +22,7 @@ export default function Switch() {
   const handleToggle = async () => {
     const newChecked = !checked;
     setChecked(newChecked);
-    await updateusermode(newChecked);
+    await updateusermode(newChecked, pathname);
   };
 
   return (

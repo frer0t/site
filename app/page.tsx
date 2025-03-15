@@ -78,8 +78,12 @@ export default async function HomePage({ searchParams }: PageProps) {
                     monkeytype.
                   </Href>
                 </p>
-                <CopyToClipBoard text="me@frerot.dev">
-                  ✉️ me[at]frerot.dev
+                <CopyToClipBoard
+                  text="me@frerot.dev"
+                  className="py-4 px-4 bg-transparent dark:bg-transparent border border-dashed border-mygreen dark:border-myred"
+                  contentClassName="text-lg"
+                >
+                  📧 me[at]frerot.dev
                 </CopyToClipBoard>
                 <div className="prose dark:prose-stone">
                   <Hobbies />

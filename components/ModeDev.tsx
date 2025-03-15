@@ -88,8 +88,8 @@ const ModeDev = ({ paramsMessage }: { paramsMessage: string }) => {
         </h2>
         <CopyToClipboard
           text={`${baseurl}/api/start`}
-          className="backdrop-blur-sm xs:h-36 w-[20rem] sm:h-40 sm:w-[40rem] border border-dashed border-mygreen dark:border-myred  "
-          contentClassName="items-center justify-center sm:text-2xl"
+          className="backdrop-blur-sm w-fit p-4 xs:h-36 xs:w-[20rem] sm:h-40 sm:w-[40rem] border border-dashed border-mygreen dark:border-myred"
+          contentClassName="items-center justify-center text-xs sm:text-2xl"
         >
           {baseurl}/api/start
         </CopyToClipboard>
