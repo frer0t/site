@@ -2,8 +2,8 @@
 
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useEffect, useState } from "react";
-import { navigate } from "./actions/navigate";
 
 const NotFound = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -18,7 +18,7 @@ const NotFound = () => {
   return (
     <main className="min-h-[90vh] overflow-hidden">
       <Header secretTitle="/404" />
-      <div className="flex flex-col items-center justify-center p-4 text-center relative min-h-[60vh]">
+      <div className="flex flex-col items-center justify-center p-4 text-center relative min-h-[70vh]">
         {/* Animated 404s that follow mouse with parallax effect */}
         {[
           "top-4 left-4",
@@ -57,26 +57,12 @@ const NotFound = () => {
         <h2 className="mb-8 text-lg sm:text-xl lg:text-2xl text-myblack dark:text-white opacity-75 animate-slide-up">
           Oops! Page not found
         </h2>
-        <form
-          action={navigate}
-          method="POST"
-          className="w-full max-w-xl relative group"
+        <Link
+          href="/"
+          className="text-myblack dark:text-white underline hover:text-mygreen dark:hover:text-myred decoration-wavy font-bold text-lg sm:text-xl lg:text-2xl transition-all duration-300"
         >
-          <input
-            type="text"
-            name="route"
-            placeholder="correct your mistake"
-            className="w-full p-4 text-center text-lg sm:text-xl lg:text-2xl text-myblack dark:text-white 
-              bg-transparent outline-none transition-all duration-300
-              border-b-2 border-transparent hover:border-gray-300 focus:border-gray-500
-              focus:outline-none placeholder:opacity-50"
-            autoCapitalize="off"
-            autoComplete="off"
-            autoCorrect="off"
-            spellCheck="false"
-            autoFocus
-          />
-        </form>
+          go back home
+        </Link>
       </div>
     </main>
   );

@@ -9,7 +9,7 @@ export function middleware(request: NextRequest) {
   if (modeCookie?.value === "false" && request.nextUrl.pathname !== "/") {
     // Redirect to the root
     const randomMessages = [
-      "Nice try. Come back after you've fixed that challange",
+      "Nice try. Come back after you've done the challange",
       "Challenge failed: Complete your work first",
       "Error 418: Developer not ready for break",
       "Access denied: Unfinished challenge detected",
