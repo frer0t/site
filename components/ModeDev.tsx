@@ -29,6 +29,8 @@ const ModeDev = ({ paramsMessage }: { paramsMessage: string }) => {
       key={1}
       className="relative h-screen flex items-center justify-center"
       exit={{ opacity: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 0.9 }}
     >
       <canvas
