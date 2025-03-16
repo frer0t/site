@@ -57,8 +57,8 @@ export default async function HomePage({ searchParams }: PageProps) {
                   <span className="font-semibold text-md dark:text-white">
                     hi, i&apos;m frérot ntwali
                   </span>
-                  , i started software engineering in 2019, with{" "}
-                  <Href to="https://hackclub.com">hackclub.</Href>
+                  , i started software engineering in 2023, with{" "}
+                  <Href to="https://andela.com">andela.</Href>
                 </p>
                 <p>
                   i&apos;m currently{" "}

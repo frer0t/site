@@ -15,8 +15,9 @@ export default function Switch() {
       .split("; ")
       .find((row) => row.startsWith("mode="))
       ?.split("=")[1];
-
-    setChecked(mode === "true" ? true : false);
+    if (mode) {
+      setChecked(mode === "true" ? true : false);
+    }
   }, []);
 
   const handleToggle = async () => {
