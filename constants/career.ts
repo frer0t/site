@@ -13,17 +13,16 @@ export default [
     ],
   },
   {
-    role: "Junior Backend Engineer",
+    role: "Backend Engineer",
     company: "Eden Care Medical",
     companyLink: "https://www.edencaremedical.com/",
     location: "Remote, Kigali",
     start: "2024-10-07",
     end: "2025-02-28",
     done: [
-      "Built backend services with Spring boot and Java",
-      "Developed REST APIs for core functionalities",
-      "Deployed and managed AWS EC2 instances",
-      "Set up nginx for load balancing and reverse proxy",
+      " Developed REST APIs for core functionalities using Spring Boot and Java.",
+      " Managed AWS EC2 instances and set up nginx for load balancing and reverse proxy.",
+      "Collaborated with team members to ensure seamless backend operations."
     ],
   },
   {

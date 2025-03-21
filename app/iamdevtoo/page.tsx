@@ -19,5 +19,5 @@ const page = () => {
     </main>
   );
 };
-
+export const dynamic = 'force-dynamic'
 export default page;
