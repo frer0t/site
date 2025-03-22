@@ -22,7 +22,7 @@
     "date-fns": "^4.1.0",
     "jsonwebtoken": "^9.0.2",
     "motion": "^12.4.3",
-    "next": "^15.2.0",
+    "next": "^15.2.3",
     "prisma": "^6.4.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
