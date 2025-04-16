@@ -15,7 +15,7 @@
     "@mdx-js/react": "^3.1.0",
     "@next/mdx": "^15.1.7",
     "@prisma/client": "^6.5.0",
-    "@react-email/components": "^0.0.34",
+    "@react-email/components": "^0.0.36",
     "@types/mdx": "^2.0.13",
     "clsx": "^2.1.1",
     "crypto": "^1.0.1",
