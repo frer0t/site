@@ -7,11 +7,12 @@ const links = [
   { href: "/", label: "home" },
   { href: "/portfolio", label: "portfolio" },
   { href: "/blog", label: "blog" },
-  // { href: "/identity", label: "identity" },
+  // {href:"/identity", label:"identity"},
+  // { href: "/uses", label: "uses" },
 ];
 const socials = [
   { href: "https://linkedin.com/in/frerotntwali", Icon: FaLinkedin },
-  { href: "https://github.com/iamfrerot", Icon: FaGithub },
+  { href: "https://github.com/frer0t", Icon: FaGithub },
 ];
 const Nav = () => {
   const pathname = usePathname();

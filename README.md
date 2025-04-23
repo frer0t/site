@@ -27,7 +27,6 @@
     </ul>
   </li>
   <li><a href="#usage">how to use this thing</a></li>
-  <li><a href="#roadmap">future adventures</a></li>
   <li><a href="#license">boring legal stuff</a></li>
   <li><a href="#contact">say hi to me!</a></li>
 
@@ -36,7 +35,7 @@
 
 ## the what & why
 
-[![website Screenshot](public/og.png)](https://frerot.dev) hey there! this is my
+hey there! this is my
 digital playground where i show off cool stuff i've made, talk about what i
 know, and share my professional journey. think of it as my little home on the
 internet where you can learn all about me and my work!
@@ -93,7 +92,7 @@ _follow these magical incantations to summon a local version of my website:_
 1. snag a copy of my code
 
 ```sh
-git clone https://github.com/iamfrerot/site.git
+git clone https://github.com/frer0t/site.git
 ```
 
 2. jump into the project folder
@@ -147,7 +146,7 @@ got cool ideas to make this site even more awesome? i'm all ears! 👂
 
 if your brain is bubbling with improvements or you spotted something wonky:
 
-1. scoot over to the [issues page](https://github.com/iamfrerot/site/issues)
+1. scoot over to the [issues page](https://github.com/frer0t/site/issues)
 2. smash that "new issue" button
 3. tell me all about your brilliant idea
 4. slap on a fancy tag like "enhancement" or "feature"

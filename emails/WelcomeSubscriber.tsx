@@ -28,7 +28,7 @@ export const WelcomeSubscriberEmail = ({ base_url }: { base_url: string }) => {
             content="rgb(122, 84, 121)"
           />
           <meta name="color-scheme" content="light dark" />
-          <title>frérot ntwali's newsletter</title>
+          <title>frérot ntwali's blog</title>
         </Head>
         <Body className="bg-[#f6f9fc] dark:bg-[#1a1a1a] font-sans">
           <Preview>

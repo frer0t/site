@@ -13,7 +13,7 @@ const projects: IProject[] = [
     name: "userverse",
     description: "creating api for data analytics including user management.",
     demo: "https://userverse.apidocumentation.com/reference",
-    github: "https://github.com/iamfrerot/userverse",
+    github: "https://github.com/frer0t/userverse",
     tech: "backend",
     size: "m",
     type: "oss",
@@ -35,7 +35,7 @@ const projects: IProject[] = [
     description:
       "a command-line tool for validating env variables against a schema.",
     demo: "https://www.npmjs.com/package/envario",
-    github: "https://github.com/iamfrerot/envario",
+    github: "https://github.com/frer0t/envario",
     tech: "package",
     type: "oss",
     status: "in-progress",

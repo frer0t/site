@@ -2,7 +2,7 @@ import { mydetails } from "@/constants/my-basic-details";
 import { Metadata, Viewport } from "next";
 import { baseurl } from "./staticurls";
 
-const description = `hi, i'm ${mydetails.name}, i started software engineering in 2019, with hackclub. i'm currently Software engineer at gobi. before that, i was Junior Backend engineer at eden care medical. i ❤️ lowercase, side projects and monkeytype.`;
+const description = `hi, i'm ${mydetails.name}, i started software engineering in 2023, with Andela. i'm currently Software engineer at gobi. before that, i was Junior Backend engineer at eden care medical. i ❤️ lowercase, side projects and monkeytype.`;
 
 const metadata: Metadata = {
   title: {
