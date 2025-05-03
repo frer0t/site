@@ -33,7 +33,7 @@ const CopyToClipboard: React.FC<ICopyToClipboard> = ({
     <button
       onClick={handleCopy}
       className={cn(
-        "text-wrap w-fit max-w-[36rem] relative overflow-x-scroll  rounded-lg inline-flex items-center gap-2 min-h-12 ",
+        "text-wrap w-fit max-w-[36rem] relative overflow-x-auto scrollbar-hide  rounded-lg inline-flex items-center gap-2 min-h-12 ",
         isCopied ? successColor : "text-myblack dark:text-white",
         "transition-colors duration-300",
         className
