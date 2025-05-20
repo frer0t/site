@@ -21,7 +21,7 @@ export default async function HomePage({ searchParams }: PageProps) {
   const message = queryParams.message;
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence>
       {(mode as string) === "false" ? (
         <ModeDev paramsMessage={message as string} />
       ) : (
