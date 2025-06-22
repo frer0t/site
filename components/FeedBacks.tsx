@@ -1,3 +1,4 @@
+import { IFeedback } from "@/types/constants";
 import { baseurl } from "@/utils/staticurls";
 import FeedBackError from "./Errors/FeedbackError";
 import FeedbackCard from "./FeedbackCard";

@@ -1,29 +1,14 @@
-import { baseurl } from "@/utils/staticurls";
+import projects from "@/constants/projects";
 import * as motion from "motion/react-client";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import Badge from "./Badge";
-import ProjectError from "./Errors/ProjectError";
-const Projects = async () => {
-  let projects_data: IProject[] = [];
-  try {
-    const response = await fetch(`${baseurl}/api/projects`, {
-      next: {
-        revalidate: 3600,
-      },
-    });
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    projects_data = await response.json();
-  } catch (error) {
-    return <ProjectError error={error as Error} />;
-  }
+const Projects = () => {
   return (
     <>
-      {projects_data.map((project, index) => (
+      {projects.map((project, index) => (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

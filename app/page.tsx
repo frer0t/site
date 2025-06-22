@@ -4,13 +4,11 @@ import Header from "@/components/Header";
 import HighlightText from "@/components/HighlightText";
 import Href from "@/components/Href";
 import ModeDev from "@/components/ModeDev";
-import CareerSkeleton from "@/components/Skeletons/CareerSkeleton";
 import Hobbies from "@/components/mdx/Hobbies.mdx";
 import { AnimatePresence } from "motion/react";
 import * as motion from "motion/react-client";
 import { cookies } from "next/headers";
 import Image from "next/image";
-import { Suspense } from "react";
 type PageProps = {
   searchParams: Promise<{ message: string }>;
 };
@@ -21,7 +19,7 @@ export default async function HomePage({ searchParams }: PageProps) {
   const message = queryParams.message;
 
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       {(mode as string) === "false" ? (
         <ModeDev paramsMessage={message as string} />
       ) : (
@@ -97,9 +95,7 @@ export default async function HomePage({ searchParams }: PageProps) {
                 </h1>
 
                 <div className="grid xl:grid-cols-2 xl:gap-6">
-                  <Suspense fallback={<CareerSkeleton />} name="career">
-                    <Career />
-                  </Suspense>
+                  <Career />
                 </div>
               </div>
             </div>

@@ -25,3 +25,4 @@ interface IFeedback {
   link?: string;
   created_at: string;
 }
+export type { ICareer, IFeedback, IProject };

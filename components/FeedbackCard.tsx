@@ -1,4 +1,5 @@
 "use client";
+import { IFeedback } from "@/types/constants";
 import { format } from "date-fns";
 import * as motion from "motion/react-client";
 import Link from "next/link";

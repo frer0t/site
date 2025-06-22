@@ -1,3 +1,5 @@
+import { IProject } from "@/types/constants";
+
 const projects: IProject[] = [
   {
     name: "gobi platform",

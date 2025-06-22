@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "frérot ntwali's blog posts and articles about software engineering, web development and daily life",
 };
-const page = () => {
+const BlogPage = () => {
   return (
     <main>
       <Header />
@@ -27,4 +27,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default BlogPage;

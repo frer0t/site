@@ -1,10 +1,28 @@
-export default [
+import type { ICareer } from "@/types/constants";
+
+const career: ICareer[] = [
+  {
+    role: "Software Developer",
+    company: "The House Of Kemmy",
+    companyLink: "https://www.kemmy.org/",
+    location: "Remote, Kigali",
+    start: "2025-03-01",
+    end: "2025-06-30",
+    done: [
+      "Built mobile apps for client companies",
+      "Developed the we-mep app with payment, sms and email integration",
+      "Developed Zenger, a property valuation app",
+      "Improved app architecture and user experience",
+      "Added new features and maintained existing websites",
+    ],
+  },
   {
     role: "Software Engineer",
     company: "Gobi",
     companyLink: "https://www.gobi.rw/",
     location: "Remote,Kigali",
-    start: "2025-01-01",
+    start: "2024-11-01",
+    end: "2025-03-31",
     done: [
       "Built next-gen ride-sharing solution.",
       "Developed innovative delivery system.",
@@ -22,7 +40,7 @@ export default [
     done: [
       " Developed REST APIs for core functionalities using Spring Boot and Java.",
       " Managed AWS EC2 instances and set up nginx for load balancing and reverse proxy.",
-      "Collaborated with team members to ensure seamless backend operations."
+      "Collaborated with team members to ensure seamless backend operations.",
     ],
   },
   {
@@ -72,3 +90,5 @@ export default [
     ],
   },
 ];
+
+export default career;

@@ -1,29 +1,11 @@
+import career from "@/constants/career";
 import getduration from "@/utils/getduration";
-import { baseurl } from "@/utils/staticurls";
 import { format, parseISO } from "date-fns";
-import CareerError from "./Errors/CareerError";
 import Href from "./Href";
-
-const Career = async () => {
-  let career_data: ICareer[] = [];
-
-  try {
-    const response = await fetch(`${baseurl}/api/career`, {
-      next: {
-        revalidate: 3600,
-      },
-    });
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    career_data = await response.json();
-  } catch (error) {
-    return <CareerError error={error as Error} />;
-  }
-
+const Career = () => {
   return (
     <>
-      {career_data.map((job, index) => (
+      {career.map((job, index) => (
         <div key={index} className="prose prose-indigo dark:prose-invert py-2">
           <h3 className="mt-2">{job.role}</h3>
           <p className="text-myblack/65 dark:text-white/65 ">
