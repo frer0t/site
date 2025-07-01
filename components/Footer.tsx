@@ -18,7 +18,7 @@ function Footer() {
         v{process.env.VERSION} |{" "}
         <Link
           className="text-mygreen dark:text-myred decoration-wavy underline decoration-mygreen dark:decoration-myred font-bold "
-          href={`https://github.com/iamfrerot/${process.env.NAME}/tree/${process.env.COMMIT_HASH}`}
+          href={`https://github.com/frer0t/${process.env.NAME}/tree/${process.env.COMMIT_HASH}`}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -27,7 +27,7 @@ function Footer() {
         from {formattedCommitDate}
       </p>
       <Link
-        href={`https://github.com/iamfrerot/${process.env.NAME}`}
+        href={`https://github.com/frer0t/${process.env.NAME}`}
         target="_blank"
         rel="noopener noreferrer"
         className="text-myblack dark:text-white text-sm  hover:text-mygreen dark:hover:text-myred transition-colors duration-300"
