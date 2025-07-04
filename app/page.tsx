@@ -56,23 +56,18 @@ export default async function HomePage({ searchParams }: PageProps) {
                     <span className="font-semibold text-md dark:text-white">
                       hi, i&apos;m frérot ntwali
                     </span>
-                    , i started software engineering in 2023, with{" "}
+                    , i&apos;m a{" "}
+                    <HighlightText>Software engineer</HighlightText> building
+                    full-stack applications at{" "}
+                    <Href to="https://kigalisoftware.com">kigalisoftware.</Href>{" "}
+                    and it all started in 2023, with{" "}
                     <Href to="https://andela.com">andela.</Href>
-                  </p>
-                  <p>
-                    i&apos;m currently{" "}
-                    <HighlightText>Software engineer</HighlightText> at{" "}
-                    <Href to="https://gobi.rw">gobi.</Href> before that, i was{" "}
-                    <HighlightText>Backend engineer</HighlightText> at{" "}
-                    <Href to="https://edencaremedical.com">
-                      eden care medical.
-                    </Href>
                   </p>
                   <p>
                     <HighlightText>
                       i <span className="animate-ping">❤️</span> lowercase
                     </HighlightText>
-                    , side projects and{" "}
+                    , side projects and breaking pbs on{" "}
                     <Href to="https://monkeytype.com/profile/frerot">
                       monkeytype.
                     </Href>

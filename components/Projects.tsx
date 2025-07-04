@@ -46,12 +46,12 @@ const Projects = () => {
             />
           </div>
 
-          <div className="flex flex-col gap-y-3 p-2">
+          <div className="flex flex-col gap-y-0.5 p-2">
             <h1 className="text-xl font-semibold text-">{project.name}</h1>
             <p className="text-sm text-myblack/40 dark:text-white/40">
               {project.description}
             </p>
-            <div className="flex flex-wrap gap-1">
+            <div className="flex flex-wrap gap-1 mt-2">
               <Badge color="orange">{project.type}</Badge>
               <Badge color="green">{project.tech}</Badge>
               <Badge color="blue">{project.status}</Badge>

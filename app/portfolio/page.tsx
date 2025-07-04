@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Projects from "@/components/Projects";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "portfolio",
   description: "frérot ntwali's portfolio",
 };
 const PortFolioPage = () => {

@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import SubscribeForm from "@/components/SubscribeForm";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "blog",
   description:
     "frérot ntwali's blog posts and articles about software engineering, web development and daily life",
 };
