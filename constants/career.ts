@@ -2,12 +2,24 @@ import type { ICareer } from "@/types/constants";
 
 const career: ICareer[] = [
   {
+    role: "Software Engineer",
+    company: "Kigali Software",
+    companyLink: "https://www.kigalisoftware.com/",
+    location: "Remote, Kigali",
+    start: "2025-04-02",
+    done: [
+      "Developed and maintained web applications",
+      "Implemented RESTful APIs and integrated third-party services.",
+      "Building a best way to get car insurance in Rwanda",
+    ],
+  },
+  {
     role: "Software Developer",
     company: "The House Of Kemmy",
     companyLink: "https://www.kemmy.org/",
-    location: "Remote, Kigali",
+    location: "Contract, Kigali",
     start: "2025-03-01",
-    end: "2025-06-30",
+    end: "2025-07-04",
     done: [
       "Built mobile apps for client companies",
       "Developed the we-mep app with payment, sms and email integration",
