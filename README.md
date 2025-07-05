@@ -14,19 +14,19 @@
   <summary>what's inside this box?</summary>
   <ol>
   <li>
-    <a href="#about-the-project">the what & why</a>
+    <a href="#the-what--why">the what & why</a>
     <ul>
-    <li><a href="#built-with">tech toys i played with</a></li>
+    <li><a href="#tech-toys-i-played-with">tech toys i played with</a></li>
     </ul>
   </li>
   <li>
-    <a href="#getting-started">how to kick things off</a>
+    <a href="#how-to-kick-things-off">how to kick things off</a>
     <ul>
-    <li><a href="#prerequisites">stuff you'll need first</a></li>
-    <li><a href="#installation">setting up the fun</a></li>
+    <li><a href="#development-setup">development setup</a></li>
+    <li><a href="#installation">installation</a></li>
     </ul>
   </li>
-  <li><a href="#usage">how to use this thing</a></li>
+  <li><a href="#contributing">contributing</a></li>
   <li><a href="#license">boring legal stuff</a></li>
   <li><a href="#contact">say hi to me!</a></li>
 
@@ -35,26 +35,26 @@
 
 ## the what & why
 
-hey there! this is my
-digital playground where i show off cool stuff i've made, talk about what i
-know, and share my professional journey. think of it as my little home on the
-internet where you can learn all about me and my work!
+this is my personal portfolio website where I showcase my projects, share my
+technical expertise, and document my professional journey. it serves as a
+comprehensive digital presence that highlights my skills and experience in
+modern web development.
 
-some neat features:
+key features:
 
-- super sleek design that looks awesome on any screen size 📱💻
-- a showcase of my digital creations in the wild 🚀
-- random thoughts and tech ramblings in blog 💭
+- responsive design optimized for all devices 📱💻
+- project portfolio showcasing live applications 🚀
+- technical blog with development insights 💭
 
-i built this with all the modern web goodies to make sure it's zippy fast and
-smooth as butter. i pop in regularly to add my latest projects and brain dumps!
+built with modern web technologies to ensure optimal performance and user
+experience. regularly updated with new projects and technical content.
 
-come explore and don't be shy - drop me a line if you want to chat or
-collaborate on something cool!
+feel free to explore and reach out for collaboration opportunities or technical
+discussions!
 
 ### tech toys i played with
 
-here are the fun tools i used to build this digital treehouse:
+this project is built with the following technologies and frameworks:
 
 [![Next.js][Next-badge]][Next-url] [![React][React-badge]][React-url]
 [![TypeScript][TypeScript-badge]][TypeScript-url]
@@ -67,74 +67,65 @@ here are the fun tools i used to build this digital treehouse:
 
 ## how to kick things off
 
-want to run this site on your own computer? follow these steps and you'll be up
-and running in no time! 🏃‍♂️💨
+to run this project locally, follow the installation and setup instructions
+below:
 
-### stuff you'll need first
+### development setup
 
-before we dive in, make sure you've got these things installed:
+before getting started, ensure you have the following installed:
 
-- npm (the package wrangler)
+- pnpm (the fast, disk space efficient package manager)
   ```sh
-  npm install npm@latest -g
+  npm install -g pnpm
   ```
-- node (either using nvm - the cool way)
+- node.js (version 18.17.0 or higher)
   ```sh
-  nvm install 18.17.0 # or whatever version floats your boat
+  nvm install 18.17.0 # recommended via nvm
   ```
-  or grab it from [nodejs.org](https://nodejs.org/en/download/) like a normal
-  person
+  or download from [nodejs.org](https://nodejs.org/en/download/)
 
-### setting up the fun
+### installation
 
-_follow these magical incantations to summon a local version of my website:_
+_follow these steps to set up a local development environment:_
 
-1. snag a copy of my code
+1. clone the repository
 
 ```sh
 git clone https://github.com/frer0t/site.git
 ```
 
-2. jump into the project folder
+2. navigate to the project directory
 
 ```sh
 cd site
 ```
 
-3. install all the digital ingredients
+3. install dependencies
 
 ```sh
-npm install
-# or if you're fancy
-yarn install
-# or if you're extra fancy
 pnpm install
 ```
 
-4. create a secret spell book (`.env.local`) with these magic words
+4. create environment variables file (`.env.local`)
 
 ```
 NEXT_PUBLIC_URL=http://localhost:3000
 RESEND_KEY=your_resend_api_key
 RESEND_AUDIENCE_ID=your_audience_id
-RESEND_FROM_EMAIL=my@custom.domain
+RESEND_FROM_EMAIL=your@custom.domain
+MONKEY_TYPE_KEY=your_monkey_type_api_key
 ```
 
-5. start the engines!
+5. start the development server
 
 ```sh
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
 ```
 
-6. point your browser to [http://localhost:3000](http://localhost:3000) and
-   voilà! ✨
+6. open your browser to [http://localhost:3000](http://localhost:3000) and start
+   developing! ✨
 
-congrats! you've got my website running on your very own computer. how cool is
-that?
+the application should now be running locally on your development environment.
 
 <p align="right">(<a href="#readme-top">back to top ⬆️</a>)</p>
 
