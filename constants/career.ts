@@ -14,7 +14,7 @@ const career: ICareer[] = [
     ],
   },
   {
-    role: "Software Developer",
+    role: "Software Engineer Contractor",
     company: "The House Of Kemmy",
     companyLink: "https://www.kemmy.org/",
     location: "Contract, Kigali",
