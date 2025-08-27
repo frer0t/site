@@ -1,0 +1,79 @@
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (@media (prefers-color-scheme: dark));
+
+@theme {
+  --font-medownhere: var(--font-just-me-again-down-here);
+
+  --color-myblack: rgb(19, 25, 35);
+  --color-myred: rgb(122, 84, 121);
+  --color-mygreen: rgb(60, 161, 137);
+
+  --color-metal-25: #f9fafb;
+  --color-metal-50: #f0f3f9;
+  --color-metal-100: #e9eff6;
+  --color-metal-200: #d7dfe9;
+  --color-metal-300: #afbaca;
+  --color-metal-400: #8897ae;
+  --color-metal-500: #5e718d;
+  --color-metal-600: #455468;
+  --color-metal-700: #3d4a5c;
+  --color-metal-800: #2d3643;
+  --color-metal-900: #1c222b;
+
+  --breakpoint-xs: 450px;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+:root {
+  --sh-class: #2d5e9d;
+  --sh-identifier: white;
+  --sh-sign: #8996a3;
+  --sh-string: #007f7a;
+  --sh-keyword: #e02518;
+  --sh-comment: #a19595;
+  --sh-jsxliterals: #6266d1;
+  --sh-property: #e25a1c;
+  --sh-entity: #e25a1c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sh-class: #4c97f8;
+    --sh-keyword: #f47067;
+    --sh-string: #0fa295;
+  }
+  html {
+    color-scheme: dark;
+  }
+}
+pre code {
+  counter-reset: sh-line-number;
+}
+
+.sh__line::before {
+  counter-increment: sh-line-number 1;
+  content: counter(sh-line-number);
+  margin-right: 24px;
+  text-align: right;
+  color: #a4a4a4;
+}

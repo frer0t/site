@@ -69,7 +69,7 @@ const FeedbackCard = ({ data, index }: { data: IFeedback; index: number }) => {
 
       <div className="relative">
         <div className="flex items-center mb-6 justify-between ">
-          <div className="bg-gradient-to-r from-mygreen to-mygreen/80 dark:from-myred/70 dark:to-myred w-12 h-12 rounded-full flex items-center justify-center shadow-lg border-2 border-mygreen/30 dark:border-myred/30">
+          <div className="bg-linear-to-r from-mygreen to-mygreen/80 dark:from-myred/70 dark:to-myred w-12 h-12 rounded-full flex items-center justify-center shadow-lg border-2 border-mygreen/30 dark:border-myred/30">
             <span className="text-white text-lg font-bold uppercase">
               {initials}
             </span>
@@ -81,7 +81,7 @@ const FeedbackCard = ({ data, index }: { data: IFeedback; index: number }) => {
       </div>
 
       <div className="space-y-2">
-        <div className="bg-white/10 dark:bg-black/10 p-4 rounded-xl border-2 border-mygreen/10 dark:border-myred/10 backdrop-blur-sm">
+        <div className="bg-white/10 dark:bg-black/10 p-4 rounded-xl border-2 border-mygreen/10 dark:border-myred/10 backdrop-blur-xs">
           <p className="text-mygreen dark:text-myred text-sm font-semibold mb-2">
             Message for 🌍
           </p>
@@ -91,7 +91,7 @@ const FeedbackCard = ({ data, index }: { data: IFeedback; index: number }) => {
         </div>
 
         {feedback && (
-          <div className="bg-white/10 dark:bg-black/10 p-4 rounded-xl border-2 border-mygreen/10 dark:border-myred/10 backdrop-blur-sm">
+          <div className="bg-white/10 dark:bg-black/10 p-4 rounded-xl border-2 border-mygreen/10 dark:border-myred/10 backdrop-blur-xs">
             <p className="text-mygreen dark:text-myred text-sm font-semibold mb-2">
               Adventure Thoughts 💭
             </p>
@@ -102,7 +102,7 @@ const FeedbackCard = ({ data, index }: { data: IFeedback; index: number }) => {
         )}
 
         {link && (
-          <div className="bg-white/10 dark:bg-black/10 p-4 rounded-xl border-2 border-mygreen/10 dark:border-myred/10 backdrop-blur-sm">
+          <div className="bg-white/10 dark:bg-black/10 p-4 rounded-xl border-2 border-mygreen/10 dark:border-myred/10 backdrop-blur-xs">
             <p className="text-mygreen dark:text-myred text-sm font-semibold mb-2">
               Connect With Me 🔗
             </p>

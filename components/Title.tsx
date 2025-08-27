@@ -84,7 +84,7 @@ const Title = ({
           duration: 1,
           ease: "linear",
         }}
-        className={`absolute inset-0 z-0 scale-125 bg-gradient-to-t from-mygreen/0 from-40% via-mygreen/40 to-mygreen/0 to-60% dark:from-myred/0 dark:from-40% dark:via-myred/40 dark:to-60% transition-opacity ${
+        className={`absolute inset-0 z-0 scale-125 bg-linear-to-t from-mygreen/0 from-40% via-mygreen/40 to-mygreen/0 to-60% dark:from-myred/0 dark:from-40% dark:via-myred/40 dark:to-60% transition-opacity ${
           encrypted ? "opacity-100 block" : "opacity-0 hidden"
         }`}
       />
