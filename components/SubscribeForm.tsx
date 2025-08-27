@@ -11,7 +11,7 @@ const SubscribeForm = () => {
         <input
           type="email"
           placeholder="Enter your email"
-          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-mygreen dark:focus:ring-myred focus:ring-opacity-50 dark:bg-gray-800 dark:border-gray-700 transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-80"
+          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-mygreen dark:focus:ring-myred focus:ring-opacity-50 dark:bg-gray-800 dark:border-gray-700 transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-80"
           name="email"
           id="email"
           disabled={pending}

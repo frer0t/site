@@ -6,7 +6,7 @@ const ProjectSkeleton = () => {
       {arr.map((_, index) => (
         <Skeleton
           key={index}
-          className="w-full flex flex-col overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white/90 dark:bg-myblack/95 border-l-2 border-dashed border-mygreen dark:border-myred backdrop-blur-sm h-fit"
+          className="w-full flex flex-col overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white/90 dark:bg-myblack/95 border-l-2 border-dashed border-mygreen dark:border-myred backdrop-blur-xs h-fit"
         >
           <SkeletonLine className="h-40 w-full rounded-none" />
           <div className="space-y-2 my-4 px-1">

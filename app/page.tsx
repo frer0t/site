@@ -51,7 +51,7 @@ export default async function HomePage({ searchParams }: PageProps) {
                   className="rounded-lg aspect-square object-cover border-2 border-mygreen dark:border-myred border-opacity-65 border-dashed h-fit hidden dark:block"
                 />
 
-                <div className="text-myblack dark:text-white/80 max-w-[36rem] flex flex-col gap-2 leading-[1.8]">
+                <div className="text-myblack dark:text-white/80 max-w-xl flex flex-col gap-2 leading-[1.8]">
                   <p>
                     <span className="font-semibold text-md dark:text-white">
                       hi, i&apos;m frérot ntwali
@@ -77,7 +77,7 @@ export default async function HomePage({ searchParams }: PageProps) {
                     className="py-4 px-4 bg-transparent dark:bg-transparent border border-dashed border-mygreen dark:border-myred"
                     contentClassName="text-lg"
                   >
-                    📧 me[at]frerot.dev
+                    📧 mail[at]frerot.dev
                   </CopyToClipBoard>
                   <div className="prose dark:prose-stone">
                     <Hobbies />
