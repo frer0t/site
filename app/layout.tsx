@@ -1,5 +1,5 @@
+import "@/app/global.css";
 import Footer from "@/components/Footer";
-import "@/public/global.css";
 import { justmeAgainDownHereFont, robotoFont } from "@/utils/fonts";
 import { metadata, viewport } from "@/utils/seo";
 import { Toaster } from "sonner";
