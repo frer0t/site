@@ -1,4 +1,4 @@
-import {baseurl} from "@/utils/staticurls";
+import { baseurl } from "@/utils/staticurls";
 import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -7,7 +7,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date().toISOString(),
       changeFrequency: "weekly",
       priority: 1,
-      images: [`${baseurl}/og.png`],
+      images: [
+        `${baseurl}/logo-dark.svg`,
+        `${baseurl}/logo-light.svg`,
+        `${baseurl}/me-dark.jpeg`,
+        `${baseurl}/me-light.jpeg`,
+      ],
     },
     {
       url: `${baseurl}/portfolio`,
