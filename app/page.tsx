@@ -59,8 +59,8 @@ export default async function HomePage({ searchParams }: PageProps) {
                     , i&apos;m a{" "}
                     <HighlightText>Software engineer</HighlightText> building
                     full-stack applications at{" "}
-                    <Href to="https://kigalisoftware.com">kigalisoftware.</Href>{" "}
-                    and it all started in 2023, with{" "}
+                    <Href to="https://www.sevenxhq.com/">sevenxhq.</Href> and it
+                    all started in 2023, with{" "}
                     <Href to="https://andela.com">andela.</Href>
                   </p>
                   <p>
