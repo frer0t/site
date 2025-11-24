@@ -1,6 +1,18 @@
 import type { ICareer } from "@/types/constants";
 
 const career: ICareer[] = [
+   {
+    role: "Backend Engineer",
+    company: "Sevenx HQ",
+    companyLink: "https://www.sevenxhq.com/",
+    location: "On-site, Kigali",
+    start: "2025-06-30",
+    done: [
+      "Building internal tools for Better Management & Collaboration",
+      "Integrating Github and Slack For custom use Cases.",
+      "Built Ai Prototypes & Integrate Current System",
+    ],
+  },
   {
     role: "Software Engineer",
     company: "Kigali Software",

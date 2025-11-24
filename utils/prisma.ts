@@ -8,8 +8,6 @@ async function ConnectDb() {
     return "Connected To The Database";
   } catch (error) {
     throw { message: "Error Connection To the Database", error };
-  } finally {
-    await prisma.$disconnect();
   }
 }
 
