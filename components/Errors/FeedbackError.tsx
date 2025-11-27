@@ -9,7 +9,7 @@ const FeedBackError: FC<FeedbackErrorProps> = ({ error }) => {
     <div className="flex items-center justify-center col-span-full">
       <div className="flex flex-col bg-white/90 dark:bg-myblack/95 p-4 ">
         <h4 className="text-2xl font-bold text-red-600 mb-4">
-          Unable to load projects
+          Unable to load feedbacks
         </h4>
         <p className="text-myblack/40 dark:text-white/20 mb-4">
           {error?.message ||
