@@ -1,21 +1,37 @@
 import { IFeedback } from "@/types/constants";
-import { baseurl } from "@/utils/staticurls";
+import prisma, { ConnectDb } from "@/utils/prisma";
+import { unstable_cache } from "next/cache";
 import FeedBackError from "./Errors/FeedbackError";
 import FeedbackCard from "./FeedbackCard";
+
+const getFeedbacks = unstable_cache(
+  async () => {
+    await ConnectDb();
+    const data = await prisma.feebacks.findMany({
+      orderBy: {
+        created_at: "desc",
+      },
+    });
+
+    return data.map((item) => ({
+      initials: item.initials,
+      message: item.message,
+      feedback: item.feedback ?? undefined,
+      link: item.link ?? undefined,
+      created_at: item.created_at.toISOString(),
+    }));
+  },
+  ["feedbacks"],
+  {
+    revalidate: 3600, // Cache for 1 hour
+    tags: ["feedbacks"],
+  }
+);
 
 const FeedBacks = async () => {
   let feedbacks: IFeedback[] = [];
   try {
-    const response = await fetch(`${baseurl}/api/iamdevtoo`, {
-      next: {
-        revalidate: 3600,
-      },
-    });
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    feedbacks = await response.json();
+    feedbacks = await getFeedbacks();
   } catch (error) {
     return <FeedBackError error={error as Error} />;
   }
