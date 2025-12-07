@@ -6,7 +6,7 @@ const career: ICareer[] = [
     company: "Sevenx HQ",
     companyLink: "https://www.sevenxhq.com/",
     location: "On-site, Kigali",
-    start: "2025-06-30",
+    start: "2025-07-01",
     done: [
       "Building internal tools for Better Management & Collaboration",
       "Integrating Github and Slack For custom use Cases.",
@@ -19,6 +19,7 @@ const career: ICareer[] = [
     companyLink: "https://www.kigalisoftware.com/",
     location: "Remote, Kigali",
     start: "2025-04-02",
+    end: "2025-12-05",
     done: [
       "Developed and maintained web applications",
       "Implemented RESTful APIs and integrated third-party services.",
