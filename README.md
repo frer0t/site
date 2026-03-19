@@ -156,7 +156,7 @@ don't sue me" 😉 check out the [LICENSE](LICENSE) for the boring details.
 
 ## contact
 
-frérot ntwali - [me[at]frerot.dev](mailto:me@frerot.dev)
+frérot ntwali - [mail[at]frerot.dev](mailto:mail@frerot.dev)
 
 <p align="right">(<a href="#readme-top">back to top ⬆️</a>)</p>
 
