@@ -2,7 +2,7 @@
 
 @plugin '@tailwindcss/typography';
 
-@custom-variant dark (@media (prefers-color-scheme: dark));
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-medownhere: var(--font-just-me-again-down-here);
@@ -56,15 +56,18 @@
   --sh-entity: #e25a1c;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --sh-class: #4c97f8;
-    --sh-keyword: #f47067;
-    --sh-string: #0fa295;
-  }
-  html {
-    color-scheme: dark;
-  }
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark {
+  --sh-class: #4c97f8;
+  --sh-keyword: #f47067;
+  --sh-string: #0fa295;
 }
 pre code {
   counter-reset: sh-line-number;

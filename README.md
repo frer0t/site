@@ -63,7 +63,8 @@ this project is built with the following technologies and frameworks:
 [![React Email][ReactEmail-badge]][ReactEmail-url]
 [![React Icons][ReactIcons-badge]][ReactIcons-url]
 [![Resend][Resend-badge]][Resend-url] [![Zod][Zod-badge]][Zod-url]
-[![Prisma][Prisma-badge]][Prisma-url] [![MongoDB][MongoDB-badge]][MongoDB-url]
+[![Prisma][Prisma-badge]][Prisma-url]
+[![PostgreSQL][PostgreSQL-badge]][PostgreSQL-url]
 
 ## how to kick things off
 
@@ -109,11 +110,28 @@ pnpm install
 4. create environment variables file (`.env.local`)
 
 ```
+# app
 NEXT_PUBLIC_URL=http://localhost:3000
+
+# database (Prisma — PostgreSQL)
+DATABASE_URL=postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=public
+
+# Resend (newsletter + transactional email)
 RESEND_KEY=your_resend_api_key
-RESEND_AUDIENCE_ID=your_audience_id
 RESEND_FROM_EMAIL=your@custom.domain
+RESEND_SEGMENT_ID=your_resend_segment_id
+
+# typing stats widget (optional)
 MONKEY_TYPE_KEY=your_monkey_type_api_key
+
+# JWT secret for protected API routes (e.g. dev feedback)
+SECRET_KEY=your_long_random_secret
+```
+
+Then apply migrations:
+
+```sh
+pnpm prisma migrate dev
 ```
 
 5. start the development server
@@ -221,6 +239,6 @@ without them!
 [Prisma-badge]:
   https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white
 [Prisma-url]: https://www.prisma.io/
-[MongoDB-badge]:
-  https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white
-[MongoDB-url]: https://www.mongodb.com/
+[PostgreSQL-badge]:
+  https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white
+[PostgreSQL-url]: https://www.postgresql.org/

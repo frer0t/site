@@ -15,11 +15,14 @@ const my_image_dark = {
   url: "/me-dark.jpeg",
   type: "image/jpg",
 };
-
+const contact_details = {
+  email: "mail@frerot.dev",
+};
 export const mydetails = {
   name,
   logo_dark,
   logo_light,
   my_image_light,
   my_image_dark,
+  contact_details,
 };

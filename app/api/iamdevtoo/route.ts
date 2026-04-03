@@ -1,4 +1,4 @@
-import prisma, { ConnectDb } from "@/utils/prisma";
+import prisma from "@/utils/prisma";
 import jwt, { JsonWebTokenError } from "jsonwebtoken";
 import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
@@ -61,7 +61,6 @@ export async function POST(request: NextRequest) {
     }
 
     const { feedback, link, initials, message } = validationResult.data;
-    await ConnectDb();
     const data = await prisma.feebacks.create({
       data: { initials, message, feedback, link },
     });
