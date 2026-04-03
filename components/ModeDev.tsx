@@ -49,9 +49,8 @@ const ModeDev = ({ paramsMessage }: { paramsMessage: string }) => {
             const drops = Array(Math.floor(columns)).fill(0);
 
             const draw = () => {
-              const isDarkMode = window.matchMedia(
-                "(prefers-color-scheme: dark)"
-              ).matches;
+              const isDarkMode =
+                document.documentElement.classList.contains("dark");
               ctx.fillStyle = isDarkMode
                 ? "rgba(0, 0, 0, 0.1)"
                 : "rgba(255, 255, 255, 0.1)";

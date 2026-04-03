@@ -9,6 +9,7 @@ import { AnimatePresence } from "motion/react";
 import * as motion from "motion/react-client";
 import { cookies } from "next/headers";
 import Image from "next/image";
+import { mydetails } from "@/constants/my-basic-details";
 type PageProps = {
   searchParams: Promise<{ message: string }>;
 };
@@ -32,26 +33,9 @@ export default async function HomePage({ searchParams }: PageProps) {
             exit={{ y: 200, opacity: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex flex-col p-4 md:py-4 gap-3 md:items-center ">
-              <div className="flex flex-col  md:p-0 md:flex-row md:justify-center md:flex-wrap gap-8 ">
-                <Image
-                  src={"/me-light.jpeg"}
-                  width={380}
-                  height={380}
-                  priority={true}
-                  alt="frérot ntwali's picture"
-                  className="rounded-lg aspect-square object-cover border-2 border-mygreen dark:border-myred border-opacity-65 border-dashed h-fit dark:hidden"
-                />
-                <Image
-                  src={"/me-dark.jpeg"}
-                  width={380}
-                  height={380}
-                  priority={true}
-                  alt="frérot ntwali's picture"
-                  className="rounded-lg aspect-square object-cover border-2 border-mygreen dark:border-myred border-opacity-65 border-dashed h-fit hidden dark:block"
-                />
-
-                <div className="text-myblack dark:text-white/80 max-w-xl flex flex-col gap-2 leading-[1.8]">
+            <div className="flex flex-col gap-12 p-4 md:py-6 md:gap-16">
+              <section className="mx-auto flex w-full max-w-5xl flex-col gap-10 md:flex-row md:items-start md:justify-between md:gap-12 lg:gap-16">
+                <div className="text-myblack dark:text-white/80 flex min-w-0 flex-1 flex-col gap-3 leading-[1.8] md:max-w-xl">
                   <p>
                     <span className="font-semibold text-md dark:text-white">
                       hi, i&apos;m frérot ntwali
@@ -73,25 +57,41 @@ export default async function HomePage({ searchParams }: PageProps) {
                     </Href>
                   </p>
                   <CopyToClipBoard
-                    text="me@frerot.dev"
+                    text={mydetails.contact_details.email}
                     className="py-4 px-4 bg-transparent dark:bg-transparent border border-dashed border-mygreen dark:border-myred"
                     contentClassName="text-lg"
                   >
                     📧 mail[at]frerot.dev
                   </CopyToClipBoard>
-                  <div className="prose dark:prose-stone">
+                  <div className="max-w-none text-inherit [&_p]:my-0 [&_p+p]:mt-2 [&_strong]:font-semibold [&_strong]:text-myblack [&_strong]:dark:text-white">
                     <Hobbies />
                   </div>
                 </div>
-              </div>
-              <div className="flex flex-col ">
+
+                <div className="mx-auto flex shrink-0 justify-center md:mx-0 md:justify-end">
+                  <Image
+                    src={"/me-light.jpeg"}
+                    width={320}
+                    height={320}
+                    alt="frérot ntwali's picture"
+                    className="aspect-square h-auto w-full max-w-[min(100%,280px)] rounded-lg border-2 border-dashed border-mygreen border-opacity-65 object-cover dark:hidden sm:max-w-xs md:max-w-[280px] lg:max-w-xs"
+                  />
+                  <Image
+                    src={"/me-dark.jpeg"}
+                    width={320}
+                    height={320}
+                    alt="frérot ntwali's picture"
+                    className="hidden aspect-square h-auto w-full max-w-[min(100%,280px)] rounded-lg border-2 border-dashed border-mygreen border-opacity-65 object-cover dark:block dark:border-myred sm:max-w-xs md:max-w-[280px] lg:max-w-xs"
+                  />
+                </div>
+              </section>
+
+              <div className="flex w-full flex-col">
                 <h1 className="text-7xl font-medownhere mb-6 md:text-center ">
                   <HighlightText>career</HighlightText>
                 </h1>
 
-                <div className="grid xl:grid-cols-2 xl:gap-6">
-                  <Career />
-                </div>
+                <Career />
               </div>
             </div>
           </motion.main>

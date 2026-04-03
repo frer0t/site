@@ -1,3 +1,4 @@
+import { mydetails } from "@/constants/my-basic-details";
 import {
   Body,
   Container,
@@ -11,7 +12,6 @@ import {
   Tailwind,
   Text,
 } from "@react-email/components";
-
 export const WelcomeSubscriberEmail = ({ base_url }: { base_url: string }) => {
   return (
     <Html>
@@ -73,7 +73,7 @@ export const WelcomeSubscriberEmail = ({ base_url }: { base_url: string }) => {
                 be shy!{" "}
                 <Link
                   className="text-[#3ca189] dark:text-[#7a5479] font-bold hover:underline"
-                  href="mailto:me@frerot.dev"
+                  href={`mailto:${mydetails.contact_details.email}`}
                 >
                   Ping me anytime! ✉️
                 </Link>

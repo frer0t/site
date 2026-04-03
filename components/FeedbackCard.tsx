@@ -12,7 +12,7 @@ const FeedbackCard = ({ data, index }: { data: IFeedback; index: number }) => {
       initial={{ x: 50, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
-      key={index}
+      key={data.feedback_id}
       className="relative rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 max-w-md border-2 border-dashed border-mygreen dark:border-myred overflow-hidden"
     >
       {/* Matrix-like background with canvas */}
@@ -32,9 +32,8 @@ const FeedbackCard = ({ data, index }: { data: IFeedback; index: number }) => {
             const drops = Array(Math.floor(columns)).fill(0);
 
             const draw = () => {
-              const isDarkMode = window.matchMedia(
-                "(prefers-color-scheme: dark)"
-              ).matches;
+              const isDarkMode =
+                document.documentElement.classList.contains("dark");
               ctx.fillStyle = isDarkMode
                 ? "rgba(0, 0, 0, 0.1)"
                 : "rgba(255, 255, 255, 0.1)";

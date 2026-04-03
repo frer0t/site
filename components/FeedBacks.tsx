@@ -1,12 +1,11 @@
 import { IFeedback } from "@/types/constants";
-import prisma, { ConnectDb } from "@/utils/prisma";
+import prisma from "@/utils/prisma";
 import { unstable_cache } from "next/cache";
 import FeedBackError from "./Errors/FeedbackError";
 import FeedbackCard from "./FeedbackCard";
 
 const getFeedbacks = unstable_cache(
   async () => {
-    await ConnectDb();
     const data = await prisma.feebacks.findMany({
       orderBy: {
         created_at: "desc",
@@ -14,6 +13,7 @@ const getFeedbacks = unstable_cache(
     });
 
     return data.map((item) => ({
+      feedback_id: item.feedback_id,
       initials: item.initials,
       message: item.message,
       feedback: item.feedback ?? undefined,
@@ -38,7 +38,11 @@ const FeedBacks = async () => {
   return (
     <>
       {feedbacks.map((feedback, index) => (
-        <FeedbackCard key={index} data={feedback} index={index} />
+        <FeedbackCard
+          key={feedback.feedback_id}
+          data={feedback}
+          index={index}
+        />
       ))}
     </>
   );

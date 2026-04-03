@@ -3,7 +3,7 @@ import WelcomeSubscriberEmail from "@/emails/WelcomeSubscriber";
 import resend from "@/utils/resend";
 import { baseurl } from "@/utils/staticurls";
 import { z } from "zod";
-const audienceId = process.env.RESEND_AUDIENCE_ID as string;
+const segmentId = process.env.RESEND_SEGMENT_ID as string;
 const from_email = process.env.RESEND_FROM_EMAIL as string;
 
 const subscribe = async function (prevState: object, data: FormData) {
@@ -17,7 +17,11 @@ const subscribe = async function (prevState: object, data: FormData) {
     if (typeof email === "string") {
       const response = await resend.contacts.create({
         email,
-        audienceId,
+        segments: [
+          {
+            id: segmentId,
+          },
+        ],
       });
       if (response.error) {
         return { message: response.error.message, success: false };

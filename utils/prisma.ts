@@ -1,14 +1,13 @@
 import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient();
+const globalForPrisma = globalThis as unknown as {
+  prisma: PrismaClient | undefined;
+};
 
-async function ConnectDb() {
-  try {
-    await prisma.$connect();
-    return "Connected To The Database";
-  } catch (error) {
-    throw { message: "Error Connection To the Database", error };
-  }
+const prisma = globalForPrisma.prisma ?? new PrismaClient();
+
+if (process.env.NODE_ENV !== "production") {
+  globalForPrisma.prisma = prisma;
 }
 
-export { ConnectDb, prisma as default };
+export default prisma;
