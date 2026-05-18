@@ -8,9 +8,8 @@ const projects: IProject[] = [
     demo: "https://irekure.frerot.dev",
     tech: "web",
     type: "oss",
-    status: "completed",
+    status: "shipped",
     size: "s",
-    cover: "/projects/irekure.png",
     github: "https://github.com/frer0t/irekure",
   },
   {
@@ -20,9 +19,8 @@ const projects: IProject[] = [
     demo: "https://we-mep.rw/app",
     tech: "mobile",
     type: "product",
-    status: "completed",
+    status: "shipped",
     size: "l",
-    cover: "/projects/we-mep.webp",
   },
   {
     name: "gobi platform",
@@ -33,7 +31,6 @@ const projects: IProject[] = [
     type: "product",
     status: "in-progress",
     size: "l",
-    cover: "/projects/gobi.png",
   },
   {
     name: "Eden Care Provider Portal",
@@ -42,22 +39,9 @@ const projects: IProject[] = [
     demo: "https://portal.provider.edencaremedical.com",
     tech: "web",
     type: "product",
-    status: "completed",
+    status: "shipped",
     size: "l",
-    cover: "/projects/edencare.png",
   },
-  // {
-  //   name: "userverse",
-  //   description:
-  //     "Comprehensive API solution for data analytics with user management capabilities. Provides tools for user behavior analysis, authentication services, and customizable reporting dashboards.",
-  //   demo: "https://userverse.apidocumentation.com/reference",
-  //   github: "https://github.com/frer0t/userverse",
-  //   tech: "backend",
-  //   size: "m",
-  //   type: "oss",
-  //   status: "in-progress",
-  //   cover: "/projects/userverse.png",
-  // },
   {
     name: "Locus Program",
     description:
@@ -65,9 +49,8 @@ const projects: IProject[] = [
     demo: "https://locus.frerot.dev/",
     tech: "web",
     type: "client",
-    status: "completed",
+    status: "shipped",
     size: "s",
-    cover: "/projects/locus.png",
   },
   {
     name: "envario",
@@ -77,9 +60,8 @@ const projects: IProject[] = [
     github: "https://github.com/frer0t/envario",
     tech: "package",
     type: "oss",
-    status: "in-progress",
+    status: "shipped",
     size: "s",
-    cover: "/projects/envario.png",
   },
 ];
 

@@ -9,7 +9,7 @@ const PortFolioPage = () => {
   return (
     <main>
       <Header />
-      <div className="grid xs:grid-cols-2 md:grid-cols-3 gap-3 py-5 px-3 overflow-y-hidden ">
+      <div className="flex flex-col gap-2 pt-6 pb-16">
         <Projects />
       </div>
     </main>
