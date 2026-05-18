@@ -101,7 +101,7 @@ importers:
         version: 9.1.7
       postcss:
         specifier: ^8
-        version: 8.5.10
+        version: 8.5.11
       tailwindcss:
         specifier: ^4.1.12
         version: 4.1.12
@@ -1086,8 +1086,8 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  brace-expansion@5.0.5:
-    resolution: {integrity: sha512-VZznLgtwhn+Mact9tfiwx64fA9erHH/MCXEUfB/0bX/6Fz6ny5EGTXYltMocqg4xFAQZtnO3DHWWXi8RiuN7cQ==}
+  brace-expansion@5.0.6:
+    resolution: {integrity: sha512-kLpxurY4Z4r9sgMsyG0Z9uzsBlgiU/EFKhj/h91/8yHu0edo7XuixOIH3VcJ8kkxs6/jPzoI6U9Vj3WqbMQ94g==}
     engines: {node: 18 || 20 || >=22}
 
   buffer-equal-constant-time@1.0.1:
@@ -1838,8 +1838,8 @@ packages:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.5.10:
-    resolution: {integrity: sha512-pMMHxBOZKFU6HgAZ4eyGnwXF/EvPGGqUr0MnZ5+99485wwW41kW91A4LOGxSHhgugZmSChL5AlElNdwlNgcnLQ==}
+  postcss@8.5.11:
+    resolution: {integrity: sha512-5dDj8+lmvA8XB78SmzGI8NlQoksv7IfutGWeVZxiixHbO+p4LDPT3wuG/D9sM/wrjZZ9I+Siy/e117vbFPxSZg==}
     engines: {node: ^10 || ^12 || >=14}
 
   prettier@3.5.3:
@@ -2831,7 +2831,7 @@ snapshots:
       '@alloc/quick-lru': 5.2.0
       '@tailwindcss/node': 4.1.12
       '@tailwindcss/oxide': 4.1.12
-      postcss: 8.5.10
+      postcss: 8.5.11
       tailwindcss: 4.1.12
 
   '@tailwindcss/typography@0.5.16(tailwindcss@4.1.12)':
@@ -2922,7 +2922,7 @@ snapshots:
 
   baseline-browser-mapping@2.10.29: {}
 
-  brace-expansion@5.0.5:
+  brace-expansion@5.0.6:
     dependencies:
       balanced-match: 4.0.4
 
@@ -3730,7 +3730,7 @@ snapshots:
 
   minimatch@10.2.4:
     dependencies:
-      brace-expansion: 5.0.5
+      brace-expansion: 5.0.6
 
   minipass@7.1.2: {}
 
@@ -3866,7 +3866,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  postcss@8.5.10:
+  postcss@8.5.11:
     dependencies:
       nanoid: 3.3.12
       picocolors: 1.1.1
