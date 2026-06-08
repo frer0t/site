@@ -70,18 +70,18 @@ export default async function HomePage({ searchParams }: PageProps) {
 
                 <div className="mx-auto flex shrink-0 justify-center md:mx-0 md:justify-end">
                   <Image
-                    src={"/me-light.jpeg"}
+                    src={"/me-light.jpg"}
                     width={320}
                     height={320}
                     alt="frérot ntwali's picture"
-                    className="aspect-square h-auto w-full max-w-[min(100%,280px)] rounded-lg border-2 border-dashed border-mygreen border-opacity-65 object-cover dark:hidden sm:max-w-xs md:max-w-[280px] lg:max-w-xs"
+                    className="aspect-square h-auto w-full max-w-[min(100%,280px)] rounded-lg object-cover object-top dark:hidden sm:max-w-xs md:max-w-[280px] lg:max-w-xs"
                   />
                   <Image
-                    src={"/me-dark.jpeg"}
+                    src={"/me-dark.jpg"}
                     width={320}
                     height={320}
                     alt="frérot ntwali's picture"
-                    className="hidden aspect-square h-auto w-full max-w-[min(100%,280px)] rounded-lg border-2 border-dashed border-mygreen border-opacity-65 object-cover dark:block dark:border-myred sm:max-w-xs md:max-w-[280px] lg:max-w-xs"
+                    className="hidden aspect-square h-auto w-full max-w-[min(100%,280px)] rounded-lg object-cover object-top dark:block sm:max-w-xs md:max-w-[280px] lg:max-w-xs"
                   />
                 </div>
               </section>

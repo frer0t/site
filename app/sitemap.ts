@@ -10,8 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       images: [
         `${baseurl}/logo-dark.svg`,
         `${baseurl}/logo-light.svg`,
-        `${baseurl}/me-dark.jpeg`,
-        `${baseurl}/me-light.jpeg`,
+        `${baseurl}/me-dark.jpg`,
+        `${baseurl}/me-light.jpg`,
       ],
     },
     {

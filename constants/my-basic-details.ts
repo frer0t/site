@@ -8,11 +8,11 @@ const logo_light = {
   type: "image/svg+xml",
 };
 const my_image_light = {
-  url: "/me-light.jpeg",
+  url: "/me-light.jpg",
   type: "image/jpg",
 };
 const my_image_dark = {
-  url: "/me-dark.jpeg",
+  url: "/me-dark.jpg",
   type: "image/jpg",
 };
 const contact_details = {
