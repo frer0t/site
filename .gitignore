@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# velite content layer (generated)
+/.velite/
+
 
 # misc
 .DS_Store
