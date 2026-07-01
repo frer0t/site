@@ -1,10 +1,10 @@
 {
   "name": "site",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "prisma generate && next build",
+    "build": "next build",
     "start": "next start",
     "prepare": "husky",
     "email": "email dev"
@@ -13,7 +13,6 @@
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
     "@next/mdx": "16.2.2",
-    "@prisma/client": "^6.5.0",
     "@react-email/components": "^0.0.36",
     "@types/mdx": "^2.0.13",
     "clsx": "^2.1.1",
@@ -22,7 +21,6 @@
     "jsonwebtoken": "^9.0.2",
     "motion": "^12.4.3",
     "next": "16.2.6",
-    "prisma": "^6.5.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-email": "^4.0.7",

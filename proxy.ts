@@ -29,5 +29,5 @@ export function proxy(request: NextRequest) {
 
 // Specify which paths this middleware should run on
 export const config = {
-  matcher: ["/portfolio", "/blog", "/identity", "/iamdevtoo", "/home"],
+  matcher: ["/portfolio", "/blog", "/identity", "/devs", "/home"],
 };

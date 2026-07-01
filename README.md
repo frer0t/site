@@ -63,8 +63,7 @@ this project is built with the following technologies and frameworks:
 [![React Email][ReactEmail-badge]][ReactEmail-url]
 [![React Icons][ReactIcons-badge]][ReactIcons-url]
 [![Resend][Resend-badge]][Resend-url] [![Zod][Zod-badge]][Zod-url]
-[![Prisma][Prisma-badge]][Prisma-url]
-[![PostgreSQL][PostgreSQL-badge]][PostgreSQL-url]
+[![Cloudflare KV][CloudflareKV-badge]][CloudflareKV-url]
 
 ## how to kick things off
 
@@ -113,8 +112,10 @@ pnpm install
 # app
 NEXT_PUBLIC_URL=http://localhost:3000
 
-# database (Prisma — PostgreSQL)
-DATABASE_URL=postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=public
+# Cloudflare KV
+CLOUDFLARE_ACCOUNT_ID=your_cloudflare_account_id
+CLOUDFLARE_API_TOKEN=your_workers_kv_storage_edit_token
+CLOUDFLARE_KV_NAMESPACE_ID=your_kv_namespace_id
 
 # Resend (newsletter + transactional email)
 RESEND_KEY=your_resend_api_key
@@ -124,15 +125,11 @@ RESEND_SEGMENT_ID=your_resend_segment_id
 # typing stats widget (optional)
 MONKEY_TYPE_KEY=your_monkey_type_api_key
 
-# JWT secret for protected API routes (e.g. dev feedback)
+# JWT secret
 SECRET_KEY=your_long_random_secret
 ```
 
-Then apply migrations:
-
-```sh
-pnpm prisma migrate dev
-```
+Create a KV namespace in the [Cloudflare dashboard](https://dash.cloudflare.com) (Workers & Pages → KV) and an API token with **Workers KV Storage Edit** on that namespace.
 
 5. start the development server
 
@@ -236,9 +233,6 @@ without them!
 [Zod-badge]:
   https://img.shields.io/badge/Zod-3068B7?style=for-the-badge&logo=zod&logoColor=white
 [Zod-url]: https://github.com/colinhacks/zod
-[Prisma-badge]:
-  https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white
-[Prisma-url]: https://www.prisma.io/
-[PostgreSQL-badge]:
-  https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white
-[PostgreSQL-url]: https://www.postgresql.org/
+[CloudflareKV-badge]:
+  https://img.shields.io/badge/Cloudflare_KV-F38020?style=for-the-badge&logo=cloudflare&logoColor=white
+[CloudflareKV-url]: https://developers.cloudflare.com/kv/

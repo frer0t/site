@@ -24,6 +24,19 @@ interface IProject {
   size: "s" | "m" | "l";
   status: "in-progress" | "shipped";
 }
+interface LeaderboardEntry {
+  id: string;
+  name: string;
+  language: string;
+  solveTimeMs: number;
+  completedAt: string;
+  initials?: string;
+  message?: string;
+  feedback?: string;
+  link?: string;
+}
+
+/** @deprecated use LeaderboardEntry */
 interface IFeedback {
   feedback_id: string;
   initials: string;
@@ -32,4 +45,4 @@ interface IFeedback {
   link?: string;
   created_at: string;
 }
-export type { ICareerCompany, ICareerRole, IFeedback, IProject };
+export type { ICareerCompany, ICareerRole, IFeedback, IProject, LeaderboardEntry };
