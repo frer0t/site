@@ -88,11 +88,11 @@ const ModeDev = ({ paramsMessage }: { paramsMessage: string }) => {
           <SiPostman height={6} width={6} className="text-orange-500" />
         </h2>
         <CopyToClipboard
-          text={`${baseurl}/api/start`}
+          text={`${baseurl}/api/challenge`}
           className="backdrop-blur-xs w-fit p-4 xs:h-36 xs:w-[20rem] sm:h-40 sm:w-160 border border-dashed border-mygreen dark:border-myred"
           contentClassName="items-center justify-center text-xs sm:text-2xl"
         >
-          {baseurl}/api/start
+          {baseurl}/api/challenge
         </CopyToClipboard>
       </div>
     </motion.main>
