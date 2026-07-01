@@ -1,8 +1,8 @@
 "use client";
 
 import projects from "@/constants/projects";
+import { cn } from "@/utils/cn";
 import * as motion from "motion/react-client";
-import Link from "next/link";
 import { useMemo, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import Badge from "./Badge";
@@ -24,6 +24,9 @@ projects.forEach((p) => {
   const k = `size:${p.size}`;
   COUNTS[k] = (COUNTS[k] || 0) + 1;
 });
+
+const linkButtonClass =
+  "inline-flex size-8 items-center justify-center rounded-full border border-black/20 text-black/50 transition-colors duration-200 hover:border-mygreen hover:bg-mygreen hover:text-white dark:border-white/20 dark:text-white/50 dark:hover:border-myred dark:hover:bg-myred";
 
 const Projects = () => {
   const [active, setActive] = useState<Set<string>>(new Set());
@@ -111,75 +114,93 @@ const Projects = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: index * 0.08, ease: "easeOut" }}
             key={project.name}
-            className="group border-b border-black/10 dark:border-white/10 hover:bg-black/[0.025] dark:hover:bg-white/[0.025] transition-colors duration-150 px-4 md:px-6 py-4 md:py-6"
           >
-            {/* Main row */}
-            <div className="grid grid-cols-[36px_1fr_auto] md:grid-cols-[44px_1fr_160px_90px_72px] lg:grid-cols-[44px_1.4fr_2fr_180px_100px_80px] items-center gap-3 md:gap-4 lg:gap-5">
-              {/* № index */}
-              <span className="font-mono text-[10px] md:text-[11px] font-medium tracking-[0.1em] text-black/30 dark:text-white/30">
-                № {String(index + 1).padStart(2, "0")}
-              </span>
-
-              {/* Name + mobile description */}
-              <div className="min-w-0">
-                <h3 className="text-lg md:text-xl lg:text-[22px] font-bold leading-[1.05] tracking-[-0.02em] text-black dark:text-white">
-                  {project.name}
-                </h3>
-                <p className="lg:hidden mt-1 font-mono text-[11px] leading-[1.5] text-black/50 dark:text-white/40 line-clamp-2">
-                  {project.description}
-                </p>
-              </div>
-
-              {/* Description — large desktop only */}
-              <p className="hidden lg:block font-mono text-[12px] leading-[1.5] text-black/50 dark:text-white/50 line-clamp-2">
-                {project.description}
-              </p>
-
-              {/* Tags — tablet + */}
-              <div className="hidden md:flex flex-wrap gap-1">
-                <Badge color="orange">{project.type}</Badge>
-                <Badge color="green">{project.tech}</Badge>
-                <Badge color="purple" className="uppercase">{project.size}</Badge>
-              </div>
-
-              {/* Status — tablet + */}
-              <div className="hidden md:block font-mono text-[10px] lg:text-[11px] font-medium tracking-[0.04em] text-black/50 dark:text-white/50">
-                {project.status === "shipped" ? "○ shipped" : "● in progress"}
-              </div>
-
-              {/* Links */}
-              <div className="flex items-center justify-end gap-2">
-                {project.github && (
-                  <Link
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors"
-                  >
-                    <FaGithub size={14} />
-                  </Link>
-                )}
-                <Link
+            <div className="group border-b border-black/10 px-4 py-4 transition-colors duration-150 hover:bg-black/[0.025] dark:border-white/10 dark:hover:bg-white/[0.025] md:px-6 md:py-6">
+              <div className="grid grid-cols-[36px_1fr_auto] items-center gap-3 md:grid-cols-[44px_1fr_160px_90px_88px] md:gap-4 lg:grid-cols-[44px_1.4fr_2fr_180px_100px_112px] lg:gap-5">
+                <a
                   href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-7 h-7 md:w-8 md:h-8 border border-black/20 dark:border-white/20 rounded-full inline-flex items-center justify-center text-black/50 dark:text-white/50 group-hover:bg-mygreen dark:group-hover:bg-myred group-hover:text-white group-hover:border-mygreen dark:group-hover:border-myred group-hover:-rotate-45 transition-all duration-200"
+                  className="contents"
+                  aria-label={`Visit ${project.name}`}
                 >
-                  <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M3 11 L11 3" />
-                    <path d="M5 3 H11 V9" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
+                  <span className="font-mono text-[10px] font-medium text-black/30 md:text-[11px] dark:text-white/30">
+                    № {String(index + 1).padStart(2, "0")}
+                  </span>
 
-            {/* Mobile-only secondary row — tags + status */}
-            <div className="md:hidden mt-2 ml-[48px] flex flex-wrap items-center gap-1.5">
-              <Badge color="orange">{project.type}</Badge>
-              <Badge color="green">{project.tech}</Badge>
-              <span className="font-mono text-[10px] text-black/40 dark:text-white/40">
-                {project.status === "shipped" ? "○ shipped" : "● in progress"}
-              </span>
+                  <div className="min-w-0">
+                    <h3 className="text-lg font-bold leading-[1.05] text-black transition-colors group-hover:text-mygreen md:text-xl lg:text-[22px] dark:text-white dark:group-hover:text-myred">
+                      {project.name}
+                    </h3>
+                    <p className="mt-1 line-clamp-2 font-mono text-[11px] leading-[1.5] text-black/50 lg:hidden dark:text-white/40">
+                      {project.description}
+                    </p>
+                  </div>
+
+                  <p className="hidden line-clamp-2 font-mono text-[12px] leading-[1.5] text-black/50 lg:block dark:text-white/50">
+                    {project.description}
+                  </p>
+
+                  <div className="hidden flex-wrap gap-1 md:flex">
+                    <Badge color="orange">{project.type}</Badge>
+                    <Badge color="green">{project.tech}</Badge>
+                    <Badge color="purple" className="uppercase">
+                      {project.size}
+                    </Badge>
+                  </div>
+
+                  <div className="hidden font-mono text-[10px] font-medium text-black/50 md:block lg:text-[11px] dark:text-white/50">
+                    {project.status === "shipped" ? "○ shipped" : "● in progress"}
+                  </div>
+                </a>
+
+                <div className="flex items-center justify-end gap-2">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`View ${project.name} source on GitHub`}
+                      className={linkButtonClass}
+                    >
+                      <FaGithub size={14} />
+                    </a>
+                  )}
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit ${project.name}`}
+                    className={cn(
+                      linkButtonClass,
+                      "group-hover:border-mygreen group-hover:bg-mygreen group-hover:text-white group-hover:-rotate-45 dark:group-hover:border-myred dark:group-hover:bg-myred"
+                    )}
+                  >
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden
+                    >
+                      <path d="M3 11 L11 3" />
+                      <path d="M5 3 H11 V9" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div className="mt-2 ml-12 flex flex-wrap items-center gap-1.5 md:hidden">
+                <Badge color="orange">{project.type}</Badge>
+                <Badge color="green">{project.tech}</Badge>
+                <span className="font-mono text-[10px] text-black/40 dark:text-white/40">
+                  {project.status === "shipped" ? "○ shipped" : "● in progress"}
+                </span>
+              </div>
             </div>
           </motion.div>
         ))}

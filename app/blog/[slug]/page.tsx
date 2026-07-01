@@ -8,6 +8,7 @@ import TagPill from "@/components/blog/TagPill";
 import BlogImage from "@/components/blog/BlogImage";
 import Toc from "@/components/blog/Toc";
 import AdjacentPostCard from "@/components/blog/AdjacentPostCard";
+import SubscribeSection from "@/components/blog/SubscribeSection";
 import MDXContent from "@/components/blog/MDXContent";
 import { blogMdxComponents } from "@/components/blog/mdxComponents";
 
@@ -86,12 +87,13 @@ const BlogPostPage = async ({ params }: BlogPostPageProps) => {
           {post.toc.length > 0 && <Toc toc={post.toc} />}
           <article className="mx-auto min-w-0 max-w-[680px] flex-1">
             <MDXContent code={post.code} components={blogMdxComponents} />
+            <SubscribeSection />
           </article>
         </div>
 
         {(prev || next) && (
           <>
-            <div className="my-14 border-t border-dashed border-mygreen/40 dark:border-myred/40" />
+            <div className="my-10 border-t border-dashed border-mygreen/40 dark:border-myred/40" />
             <div className="flex flex-col gap-4 sm:flex-row">
               {prev && <AdjacentPostCard post={prev} direction="prev" />}
               {next && <AdjacentPostCard post={next} direction="next" />}

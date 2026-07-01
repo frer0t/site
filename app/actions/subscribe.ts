@@ -22,7 +22,7 @@ const subscribe = async function (prevState: object, data: FormData) {
       await resend.emails.send({
         from: from_email,
         to: email,
-        subject: "Welcome to the newsletter!",
+        subject: "you're subscribed",
         react: WelcomeSubscriberEmail({
           base_url: baseurl,
         }),

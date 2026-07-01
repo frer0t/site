@@ -29,7 +29,7 @@ const projects: IProject[] = [
     demo: "https://gobi.rw",
     tech: "web",
     type: "product",
-    status: "in-progress",
+    status: "shipped",
     size: "l",
   },
   {

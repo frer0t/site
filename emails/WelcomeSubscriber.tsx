@@ -1,6 +1,7 @@
 import { mydetails } from "@/constants/my-basic-details";
 import {
   Body,
+  Button,
   Container,
   Head,
   Hr,
@@ -12,7 +13,10 @@ import {
   Tailwind,
   Text,
 } from "@react-email/components";
+
 export const WelcomeSubscriberEmail = ({ base_url }: { base_url: string }) => {
+  const blogUrl = `${base_url}/blog`;
+
   return (
     <Html>
       <Tailwind>
@@ -28,12 +32,10 @@ export const WelcomeSubscriberEmail = ({ base_url }: { base_url: string }) => {
             content="rgb(122, 84, 121)"
           />
           <meta name="color-scheme" content="light dark" />
-          <title>frérot ntwali's blog</title>
+          <title>frérot ntwali&apos;s blog</title>
         </Head>
         <Body className="bg-[#f6f9fc] dark:bg-[#1a1a1a] font-sans">
-          <Preview>
-            Woohoo! You're in! 🎉 Get ready for some awesome content!
-          </Preview>
+          <Preview>you&apos;re subscribed — new posts will land in your inbox</Preview>
           <Container className="bg-white dark:bg-[#2a2a2a] mx-auto p-[20px_0_48px] mb-16 rounded-lg">
             <Section className="px-12">
               <Img
@@ -48,42 +50,37 @@ export const WelcomeSubscriberEmail = ({ base_url }: { base_url: string }) => {
                 width="49"
                 height="41"
                 alt="logo"
-                className=" dark:hidden"
+                className="dark:hidden"
               />
               <Hr className="border-[#3ca189] dark:border-[#7a5479] my-5 border-dotted" />
               <Text className="text-[#394258] dark:text-[#d1d5db] text-xl leading-6 text-left font-bold">
-                Hey there! 👋 You made it!
-              </Text>
-              <Text className="text-[#394258] dark:text-[#d1d5db] text-base leading-6 text-left">
-                *Virtual high-five* for joining the coolest waitlist around! I'm
-                super excited you're here! 🎉
+                hey — you&apos;re in
               </Text>
               <Text className="text-[#525f7f] dark:text-[#9ca3af] text-base leading-6 text-left">
-                I'm cooking up some mind-blowing blog posts right now ✨ and
-                guess what? You'll be among the first to dive into this treasure
-                trove of digital goodies!
+                thanks for subscribing. the blog is live now, and you&apos;ll get new posts in
+                your inbox when they go up. no spam, unsubscribe anytime.
               </Text>
               <Text className="text-[#525f7f] dark:text-[#9ca3af] text-base leading-6 text-left">
-                Sit back, relax, maybe grab a snack 🍪 - I'll buzz your inbox as
-                soon as the first juicy articles drop!
+                if you want to catch up on what&apos;s already there:
               </Text>
+              <Button
+                href={blogUrl}
+                className="bg-[#3ca189] dark:bg-[#7a5479] text-white text-sm font-medium rounded-md px-5 py-2.5"
+              >
+                read the blog
+              </Button>
               <Hr className="border-[#3ca189] dark:border-[#7a5479] my-5 border-wavy" />
               <Text className="text-[#525f7f] dark:text-[#9ca3af] text-base leading-6 text-left">
-                Got a brilliant idea for a topic? Or just want to say hi? Don't
-                be shy!{" "}
+                got a topic in mind, or just want to say hi?{" "}
                 <Link
                   className="text-[#3ca189] dark:text-[#7a5479] font-bold hover:underline"
                   href={`mailto:${mydetails.contact_details.email}`}
                 >
-                  Ping me anytime! ✉️
+                  drop me a line
                 </Link>
               </Text>
-              <Text className="text-[#525f7f] dark:text-[#9ca3af] text-base leading-6 text-left">
-                Thanks a million for joining this adventure - we're going to
-                have so much fun together!
-              </Text>
               <Text className="text-[#525f7f] dark:text-[#9ca3af] text-base leading-6 text-left font-bold">
-                — frérot ntwali 😎
+                — frérot ntwali
               </Text>
               <Hr className="border-[#3ca189] dark:border-[#7a5479] my-5 border-dashed" />
             </Section>
