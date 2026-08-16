@@ -42,7 +42,7 @@ export default function ThemeToggle() {
       aria-pressed={isDark}
       aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
       title="Toggle theme"
-      className="inline-flex size-7 shrink-0 appearance-none items-center justify-center rounded border border-dashed border-mygreen/60 p-0 leading-none text-myblack transition-colors hover:text-mygreen focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mygreen dark:border-myred/60 dark:text-white dark:hover:text-myred dark:focus-visible:outline-myred [&_svg]:block [&_svg]:size-5 [&_svg]:shrink-0"
+      className="inline-flex size-7 shrink-0 appearance-none items-center justify-center rounded p-0 leading-none text-myblack transition-colors hover:text-mygreen focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mygreen dark:text-white dark:hover:text-myred dark:focus-visible:outline-myred [&_svg]:block [&_svg]:size-5 [&_svg]:shrink-0"
     >
       {!mounted ? (
         <span className="size-5 shrink-0" aria-hidden />
