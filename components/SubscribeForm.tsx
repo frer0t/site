@@ -1,10 +1,24 @@
 "use client";
 import subscribe from "@/app/actions/subscribe";
+import posthog from "posthog-js";
 import { useActionState } from "react";
 
 const SubscribeForm = () => {
   const initialState = { message: "", success: false };
-  const [state, formAction, pending] = useActionState(subscribe, initialState);
+  const submitSubscription = async (prevState: typeof initialState, formData: FormData) => {
+    const result = await subscribe(prevState, formData);
+
+    if (
+      result?.success &&
+      process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN &&
+      process.env.NEXT_PUBLIC_POSTHOG_HOST
+    ) {
+      posthog.capture("newsletter_subscription_completed");
+    }
+
+    return result;
+  };
+  const [state, formAction, pending] = useActionState(submitSubscription, initialState);
 
   return (
     <form action={formAction} className="flex flex-col gap-1.5" noValidate>

@@ -2,6 +2,7 @@
 
 import { useActionState } from "react";
 import { ChallengeTokenPayload } from "@/lib/challenge-auth";
+import posthog from "posthog-js";
 
 type SubmitState = {
   message: string;
@@ -36,6 +37,13 @@ async function submitMessage(
         message: data.message ?? "something went wrong",
         success: false,
       };
+    }
+
+    if (
+      process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN &&
+      process.env.NEXT_PUBLIC_POSTHOG_HOST
+    ) {
+      posthog.capture("developer_challenge_message_submitted");
     }
 
     return {

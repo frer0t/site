@@ -3,6 +3,7 @@
 import projects from "@/constants/projects";
 import { cn } from "@/utils/cn";
 import * as motion from "motion/react-client";
+import posthog from "posthog-js";
 import { useMemo, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import Badge from "./Badge";
@@ -123,6 +124,18 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="contents"
                   aria-label={`Visit ${project.name}`}
+                  onClick={() => {
+                    if (
+                      process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN &&
+                      process.env.NEXT_PUBLIC_POSTHOG_HOST
+                    ) {
+                      posthog.capture("project_demo_opened", {
+                        project_type: project.type,
+                        project_technology: project.tech,
+                        project_status: project.status,
+                      });
+                    }
+                  }}
                 >
                   <span className="font-mono text-[10px] font-medium text-black/30 md:text-[11px] dark:text-white/30">
                     № {String(index + 1).padStart(2, "0")}
@@ -162,6 +175,18 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       aria-label={`View ${project.name} source on GitHub`}
                       className={linkButtonClass}
+                      onClick={() => {
+                        if (
+                          process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN &&
+                          process.env.NEXT_PUBLIC_POSTHOG_HOST
+                        ) {
+                          posthog.capture("project_source_opened", {
+                            project_type: project.type,
+                            project_technology: project.tech,
+                            project_status: project.status,
+                          });
+                        }
+                      }}
                     >
                       <FaGithub size={14} />
                     </a>
@@ -171,6 +196,18 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Visit ${project.name}`}
+                    onClick={() => {
+                      if (
+                        process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN &&
+                        process.env.NEXT_PUBLIC_POSTHOG_HOST
+                      ) {
+                        posthog.capture("project_demo_opened", {
+                          project_type: project.type,
+                          project_technology: project.tech,
+                          project_status: project.status,
+                        });
+                      }
+                    }}
                     className={cn(
                       linkButtonClass,
                       "group-hover:border-mygreen group-hover:bg-mygreen group-hover:text-white group-hover:-rotate-45 dark:group-hover:border-myred dark:group-hover:bg-myred"
