@@ -17,7 +17,10 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${justmeAgainDownHereFont.variable} ${robotoFont.className} scroll-smooth antialiased`}
     >
-      <body className="flex min-h-screen flex-col lowercase selection:bg-mygreen/70 selection:text-white dark:selection:bg-myred dark:selection:text-white">
+      <body
+        suppressHydrationWarning
+        className="flex min-h-screen flex-col lowercase selection:bg-mygreen/70 selection:text-white dark:selection:bg-myred dark:selection:text-white"
+      >
         {/*
           Plain inline script, not next/script — beforeInteractive scripts in
           the App Router are queued into `self.__next_s` and only run once

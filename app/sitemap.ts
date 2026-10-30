@@ -1,6 +1,23 @@
+import { getAllProjects } from "@/lib/projects";
+import { getAllPosts } from "@/lib/posts";
 import { baseurl } from "@/utils/staticurls";
 import type { MetadataRoute } from "next";
+
 export default function sitemap(): MetadataRoute.Sitemap {
+  const projects = getAllProjects().map((project) => ({
+    url: `${baseurl}/portfolio/${project.slug}`,
+    lastModified: new Date().toISOString(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  const posts = getAllPosts().map((post) => ({
+    url: `${baseurl}/blog/${post.slug}`,
+    lastModified: post.date,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
   return [
     {
       url: baseurl,
@@ -26,5 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    ...projects,
+    ...posts,
   ];
 }

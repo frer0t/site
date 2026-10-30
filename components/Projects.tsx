@@ -1,36 +1,44 @@
 "use client";
 
-import projects from "@/constants/projects";
 import { cn } from "@/utils/cn";
+import type { ProjectSummary } from "@/types/project";
 import * as motion from "motion/react-client";
+import Link from "next/link";
 import posthog from "posthog-js";
 import { useMemo, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import Badge from "./Badge";
 
-const ALL_TAGS = Array.from(
-  new Set([
-    ...projects.map((p) => p.type),
-    ...projects.map((p) => p.tech),
-    ...projects.map((p) => p.status),
-    ...projects.map((p) => `size:${p.size}`),
-  ])
-);
-
-const COUNTS: Record<string, number> = {};
-projects.forEach((p) => {
-  COUNTS[p.type] = (COUNTS[p.type] || 0) + 1;
-  COUNTS[p.tech] = (COUNTS[p.tech] || 0) + 1;
-  COUNTS[p.status] = (COUNTS[p.status] || 0) + 1;
-  const k = `size:${p.size}`;
-  COUNTS[k] = (COUNTS[k] || 0) + 1;
-});
-
 const linkButtonClass =
   "inline-flex size-8 items-center justify-center rounded-full border border-black/20 text-black/50 transition-colors duration-200 hover:border-mygreen hover:bg-mygreen hover:text-white dark:border-white/20 dark:text-white/50 dark:hover:border-myred dark:hover:bg-myred";
 
-const Projects = () => {
+const Projects = ({ projects }: { projects: ProjectSummary[] }) => {
   const [active, setActive] = useState<Set<string>>(new Set());
+
+  const allTags = useMemo(
+    () =>
+      Array.from(
+        new Set([
+          ...projects.map((p) => p.type),
+          ...projects.map((p) => p.tech),
+          ...projects.map((p) => p.status),
+          ...projects.map((p) => `size:${p.size}`),
+        ])
+      ),
+    [projects]
+  );
+
+  const counts = useMemo(() => {
+    const c: Record<string, number> = {};
+    projects.forEach((p) => {
+      c[p.type] = (c[p.type] || 0) + 1;
+      c[p.tech] = (c[p.tech] || 0) + 1;
+      c[p.status] = (c[p.status] || 0) + 1;
+      const k = `size:${p.size}`;
+      c[k] = (c[k] || 0) + 1;
+    });
+    return c;
+  }, [projects]);
 
   const toggle = (tag: string) =>
     setActive((prev) => {
@@ -51,7 +59,24 @@ const Projects = () => {
       }
       return true;
     });
-  }, [active]);
+  }, [active, projects]);
+
+  const capture = (
+    event: "project_demo_opened" | "project_source_opened" | "project_detail_opened",
+    project: ProjectSummary
+  ) => {
+    if (
+      process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN &&
+      process.env.NEXT_PUBLIC_POSTHOG_HOST
+    ) {
+      posthog.capture(event, {
+        project_type: project.type,
+        project_technology: project.tech,
+        project_status: project.status,
+        project_slug: project.slug,
+      });
+    }
+  };
 
   return (
     <>
@@ -61,7 +86,7 @@ const Projects = () => {
           filter
         </span>
         <div className="flex flex-wrap gap-1.5 md:gap-2 flex-1 min-w-0">
-          {ALL_TAGS.map((tag) => {
+          {allTags.map((tag) => {
             const isOn = active.has(tag);
             const label = tag.startsWith("size:") ? tag.replace("size:", "size · ") : tag;
             return (
@@ -76,7 +101,7 @@ const Projects = () => {
               >
                 {label}
                 <span className={`text-[9px] md:text-[10px] tabular-nums ${isOn ? "text-white/70" : "text-metal-400 dark:text-metal-500"}`}>
-                  {COUNTS[tag] || 0}
+                  {counts[tag] || 0}
                 </span>
               </button>
             );
@@ -114,28 +139,15 @@ const Projects = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: index * 0.08, ease: "easeOut" }}
-            key={project.name}
+            key={project.slug}
           >
             <div className="group border-b border-black/10 px-4 py-4 transition-colors duration-150 hover:bg-black/[0.025] dark:border-white/10 dark:hover:bg-white/[0.025] md:px-6 md:py-6">
               <div className="grid grid-cols-[36px_1fr_auto] items-center gap-3 md:grid-cols-[44px_1fr_160px_90px_88px] md:gap-4 lg:grid-cols-[44px_1.4fr_2fr_180px_100px_112px] lg:gap-5">
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href={`/portfolio/${project.slug}`}
                   className="contents"
-                  aria-label={`Visit ${project.name}`}
-                  onClick={() => {
-                    if (
-                      process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN &&
-                      process.env.NEXT_PUBLIC_POSTHOG_HOST
-                    ) {
-                      posthog.capture("project_demo_opened", {
-                        project_type: project.type,
-                        project_technology: project.tech,
-                        project_status: project.status,
-                      });
-                    }
-                  }}
+                  aria-label={`View ${project.name} details`}
+                  onClick={() => capture("project_detail_opened", project)}
                 >
                   <span className="font-mono text-[10px] font-medium text-black/30 md:text-[11px] dark:text-white/30">
                     № {String(index + 1).padStart(2, "0")}
@@ -165,7 +177,7 @@ const Projects = () => {
                   <div className="hidden font-mono text-[10px] font-medium text-black/50 md:block lg:text-[11px] dark:text-white/50">
                     {project.status === "shipped" ? "○ shipped" : "● in progress"}
                   </div>
-                </a>
+                </Link>
 
                 <div className="flex items-center justify-end gap-2">
                   {project.github && (
@@ -175,18 +187,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       aria-label={`View ${project.name} source on GitHub`}
                       className={linkButtonClass}
-                      onClick={() => {
-                        if (
-                          process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN &&
-                          process.env.NEXT_PUBLIC_POSTHOG_HOST
-                        ) {
-                          posthog.capture("project_source_opened", {
-                            project_type: project.type,
-                            project_technology: project.tech,
-                            project_status: project.status,
-                          });
-                        }
-                      }}
+                      onClick={() => capture("project_source_opened", project)}
                     >
                       <FaGithub size={14} />
                     </a>
@@ -196,18 +197,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Visit ${project.name}`}
-                    onClick={() => {
-                      if (
-                        process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN &&
-                        process.env.NEXT_PUBLIC_POSTHOG_HOST
-                      ) {
-                        posthog.capture("project_demo_opened", {
-                          project_type: project.type,
-                          project_technology: project.tech,
-                          project_status: project.status,
-                        });
-                      }
-                    }}
+                    onClick={() => capture("project_demo_opened", project)}
                     className={cn(
                       linkButtonClass,
                       "group-hover:border-mygreen group-hover:bg-mygreen group-hover:text-white group-hover:-rotate-45 dark:group-hover:border-myred dark:group-hover:bg-myred"

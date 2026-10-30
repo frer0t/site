@@ -14,16 +14,6 @@ interface ICareerCompany {
   logoUrl: string;
   roles: ICareerRole[];
 }
-interface IProject {
-  name: string;
-  description: string;
-  github?: string;
-  demo: string;
-  type: "client" | "oss" | "product";
-  tech: "web" | "backend" | "mobile" | "devops/cloud" | "ai/ml" | "package";
-  size: "s" | "m" | "l";
-  status: "in-progress" | "shipped";
-}
 interface LeaderboardEntry {
   id: string;
   name: string;
@@ -45,4 +35,4 @@ interface IFeedback {
   link?: string;
   created_at: string;
 }
-export type { ICareerCompany, ICareerRole, IFeedback, IProject, LeaderboardEntry };
+export type { ICareerCompany, ICareerRole, IFeedback, LeaderboardEntry };
